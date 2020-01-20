@@ -23,14 +23,16 @@ texture.minFilter = THREE.LinearFilter;  //block the resizing of the image
 
 
 //TOOLTIP
-function addTooltip (position){
+function addTooltip (position, name){
 	
 	let spriteMap = new THREE.TextureLoader().load( "sprite.png" );
 	let spriteMaterial = new THREE.SpriteMaterial( { 
 	 	map: spriteMap
 		} );
-	let sprite = new THREE.Sprite( spriteMaterial );
+	let sprite = new THREE.Sprite( spriteMaterial )
+	sprite.name = name
 	sprite.position.copy(position.clone().normalize().multiplyScalar(30))
+	sprite.scale.multiplyScalar(2)
 	scene.add( sprite )
 
 }
@@ -46,6 +48,8 @@ function onResize(){
 	camera.updateProjectionMatrix()
 	
 }
+
+const rayCaster = new THREE.Raycaster()
 
 
 //CAMERA CONTROLS
@@ -69,16 +73,37 @@ function onClick(e) {
 	let mouse = new THREE.Vector2(
 		( e.clientX / window.innerWidth ) *2 -1, - ( e.clientY / window.innerHeight ) * 2 + 1
 		)
-	let rayCaster = new THREE.Raycaster()
 	rayCaster.setFromCamera(mouse, camera)
-	let intersects = rayCaster.intersectObject(sphere)
+	let intersects = rayCaster.intersectObjects(scene.children)
+	intersects.forEach(function (intersect){
+		if (intersect.object.type == 'Sprite'){
+			console.log(intersect.object.name)
+		}
+	})
+/*	let intersects = rayCaster.intersectObject(sphere)
 	if(intersects.length > 0) {
 		console.log(intersects[0].point) //to remove if needed, raw code
 		addTooltip(intersects[0].point)
 	}
-
+*/
 }
+
+function onMouseMove (e) {
+	let mouse = new THREE.Vector2(
+		( e.clientX / window.innerWidth ) *2 -1, - ( e.clientY / window.innerHeight ) * 2 + 1
+		)
+	rayCaster.setFromCamera(mouse, camera)
+	let intersects = rayCaster.intersectObjects(scene.children)
+	intersects.forEach(function (intersect){
+		if (intersect.object.type == 'Sprite'){
+			console.log(intersect.object.name)
+		}
+	})
+}
+
+addTooltip(new THREE.Vector3(41.66006320223875, 1.7799572824780827,-27.43192409158089), "Copernic")
 
 animate()
 window.addEventListener('resize', onResize)
 container.addEventListener('click', onClick)
+container.addEventListener('mousemove', onMouseMove )
