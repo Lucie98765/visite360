@@ -87,10 +87,28 @@ h3{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
-
 .modif p {
     background-color: white;
-    border-radius: 3px;
     width: 70%; 
+    padding: 5px;
+    font-size: 14px;
+}
+#accordeon button{
+    font-size: 12px;
+}
+#photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: auto;
+    width: 90%;
+    padding: 10px;
+    background-color: white;
+    justify-content:flex-start; 
+}
+#photos img{
+    width: 200px;
+    margin: 10px;
 }
