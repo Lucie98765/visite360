@@ -43,7 +43,7 @@ h1{
     font-family: "main_gauche";
     color: white;
     font-size: 65px;
-    margin-top: 0;
+    margin-top: -30px;
 }
 #bouton_deco{
     margin: 50px;
@@ -86,7 +86,7 @@ h3{
     border-radius: 3px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .modif p {
@@ -111,4 +111,24 @@ h3{
 #photos img{
     width: 200px;
     margin: 10px;
+    border: 5px solid rgba(0, 0, 0, 0);
+}
+#photos input{
+    margin-top: auto;
+    margin-left: -15px;
+}
+#photos input:hover{
+    cursor: pointer;
+}
+#div_boutons{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#div_boutons button{
+    margin: 5px;
+    border-radius: 5px;
+}
+#photos .photoSelec{
+    border: 5px solid var(--vert_ferme);
 }
