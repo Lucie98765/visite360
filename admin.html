@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="mediasHtml/favicon.png -->
+    <link rel="stylesheet" type="text/css" href="acces_admin.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>Accès administrateur</title>
+    <!-- Mettre toutes les balises meta -->
+</head>
+
+<body>
+    <header>
+        <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_penche.png" alt="logo pour retourner à l'accueil" /></a>
+        <a href="" id="bouton_deco"><img src="images/deco.png" alt="bouton pour se déconnecter" /></a>
+        <h1>Interface administrateur</h1>
+    </header>
+    <main>
+        <div id="accordeon">
+            <div>
+                <h2>Page visite 360</h2>
+                <div class="onglet">
+                    <h3>Titre</h3>
+                    <div class="modif">
+                        <p contenteditable="true">Titre</p>
+                        <button type="button">Enregistrer les modifications</button>
+                    </div>
+                    <h3>Texte</h3>
+                    <div class="modif">
+                        <p contenteditable="true">Texte</p>
+                        <button type="button">Enregistrer les modifications</button>
+                    </div>
+                </div>
+                <h2>Titre onglet</h2>
+                <div class="onglet">
+                    <h3>Sous-titre</h3>
+                    <div class="modif">
+                        <p contenteditable="true">Sous titre</p>
+                        <button type="button">Enregistrer les modifications</button>
+                    </div>
+                    <h3>Textes</h3>
+                    <div class="modif">
+                        <p contenteditable="true">Texte</p>
+                        <button type="button">Enregistrer les modifications</button>
+                    </div>
+                    <h3>Photos historiques</h3>
+                    <div class="modif">
+                        <div id="photos">
+                            <img src="images/photos/accueil1.jpg"/>
+                            <input type="checkbox" id="accueil1" name="accueil1" >
+                            <img src="images/photos/caravanserail.jpg"/>
+                            <input type="checkbox" id="caravanserail" name="caravanserail" >
+                            <img src="images/photos/cinema1.jpg"/>
+                            <input type="checkbox" id="cinema1" name="cinema1" >
+                            <img src="images/photos/ecuries%20_.jpg"/>
+                            <input type="checkbox" id="ecuries" name="ecuries" >
+                            <img src="images/photos/halle1.jpg"/>
+                            <input type="checkbox" id="halle1" name="halle1" >
+                            <img src="images/photos/halle10.jpg"/>
+                            <input type="checkbox" id="halle10" name="halle10" >
+                        </div>
+                        <div id="div_boutons">
+                            <button type="button">Supprimer les photos sélectionnées</button>
+                            <button type="button">Ajouter une photo</button>
+                            <button type="button">Enregistrer les modifications</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="display.js"></script>
+</body>
+
+</html>
