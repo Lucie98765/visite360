@@ -1,0 +1,114 @@
+/* Fonts */
+@font-face {
+    font-family: "main_gauche";
+    src: url("fonts/main-gauche.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "regular_bau";
+    src: url("fonts/Bau/Bau-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Général */
+body{
+    margin: 0;
+    --vert_ferme: #28e43f;
+    --rouge_ferme: #E10F21;
+    --rouge_clair: #ed4c60;
+}
+
+/* Header */
+header{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--vert_ferme);
+    flex-wrap: wrap;
+}
+#logo_gauche{
+    background-color: var(--vert_ferme);    
+}
+#logo_gauche img{
+    width: 600px;
+    height: auto;
+}
+h1{
+    width: 100vw;
+    text-align: center;
+    font-family: "main_gauche";
+    color: white;
+    font-size: 65px;
+    margin-top: 0;
+}
+#bouton_deco{
+    margin: 50px;
+}
+#bouton_deco img{
+    width: 50px;
+}
+
+/* Body */
+#accordeon{
+    margin: 30px 150px;
+    background-color: lightgray;
+}
+h2{
+    background-color: var(--rouge_ferme);
+    font-family: "main_gauche";
+    color: white;
+    padding: 10px;
+    font-size: 28px;
+    border-radius: 3px;
+}
+h3{
+    margin: 0;
+    background-color: var(--rouge_clair);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
+.onglet{
+    margin: 20px;
+    padding: 10px;
+    font-family: "regular_bau";
+    border-radius: 3px;
+}
+.modif{
+    background-color: #B6B6B6;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.modif p {
+    background-color: white;
+    width: 70%; 
+    padding: 5px;
+    font-size: 14px;
+}
+#accordeon button{
+    font-size: 12px;
+}
+#photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: auto;
+    width: 90%;
+    padding: 10px;
+    background-color: white;
+    justify-content:flex-start; 
+}
+#photos img{
+    width: 200px;
+    margin: 10px;
+}
