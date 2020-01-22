@@ -1,6 +1,8 @@
 
 
 const container = document.body
+const tooltip = document.querySelector('.tooltip')
+let spriteActive = false
 
 //CREATING A SCENE WITH CAMERA
 
@@ -11,15 +13,18 @@ const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.inner
 //CREATING A SPHERE + TEXTURE
 const geometry = new THREE.SphereGeometry( 50, 32, 32 ); //radius, width segments, height segments
 const texture = new THREE.TextureLoader().load("360.png")
+
 texture.wrapS = THREE.RepeatWrapping
 texture.repeat.x = -1 //reverse picture 
+texture.generateMipmaps = false;
+texture.minFilter = THREE.LinearFilter;
 const material = new THREE.MeshBasicMaterial( {
 	map:texture,
 	side:THREE.DoubleSide
 } );
 const sphere = new THREE.Mesh( geometry, material );
 scene.add( sphere );
-texture.minFilter = THREE.LinearFilter;  //block the resizing of the image
+
 
 
 //TOOLTIP
@@ -41,6 +46,7 @@ function addTooltip (position, name){
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight ); //aspect ratio renderer
 container.appendChild( renderer.domElement ); //add the renderer to the html 
+
 
 function onResize(){
 	renderer.setSize(window.innerWidth, innerHeight)
@@ -93,12 +99,27 @@ function onMouseMove (e) {
 		( e.clientX / window.innerWidth ) *2 -1, - ( e.clientY / window.innerHeight ) * 2 + 1
 		)
 	rayCaster.setFromCamera(mouse, camera)
+	let foundSprite = false
 	let intersects = rayCaster.intersectObjects(scene.children)
 	intersects.forEach(function (intersect){
 		if (intersect.object.type == 'Sprite'){
-			console.log(intersect.object.name)
+			let p = intersect.object.position.clone().project(camera)
+			tooltip.style.top =  (-1 * p.y + 1) * window.innerHeight / 2 + 'px'
+			tooltip.style.left = ((p.x + 1) * window.innerWidth / 2) + 'px'
+			tooltip.classList.add('is-active')
+			tooltip.innerHTML = intersect.object.name
+			spriteActive = intersect.object
+			foundSprite = true
+			gsap.to(intersect.object.scale,  .3, {x: 3, y:3, z:3 } );
 		}
 	})
+	if (foundSprite === false && spriteActive){
+		tooltip.classList.remove('is-active')
+		gsap.to(spriteActive.scale,  .3, {x: 2, y:2, z:2 } )
+
+	spriteActive = false
+		
+	}
 }
 
 addTooltip(new THREE.Vector3(41.66006320223875, 1.7799572824780827,-27.43192409158089), "Copernic")

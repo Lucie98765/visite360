@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\gsap"
   ],
-  "SelectedNode": "\\app.js",
+  "SelectedNode": "\\gsap\\index.js",
   "PreviewInSolutionExplorer": false
 }
