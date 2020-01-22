@@ -19,6 +19,7 @@ body{
     --vert_ferme: #28e43f;
     --rouge_ferme: #E10F21;
     --rouge_clair: #ed4c60;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -53,6 +54,22 @@ h1{
 }
 
 /* Body */
+main{
+    position: relative;
+}
+#help_btn{
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    left: auto;
+    top: 360px;
+    transition: 0.2s linear;
+}
+#help_btn:hover{
+    cursor: pointer;
+    width: 55px;
+    right: 8px;
+}
 #accordeon{
     margin: 30px 150px;
     background-color: lightgray;
@@ -64,6 +81,16 @@ h2{
     padding: 10px;
     font-size: 28px;
     border-radius: 3px;
+    position: relative;
+}
+h2:hover{
+    cursor: pointer;
+}
+.fleche{
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 h3{
     margin: 0;
@@ -77,6 +104,10 @@ h3{
     padding: 10px;
     font-family: "regular_bau";
     border-radius: 3px;
+    /*transition: 1s linear;*/
+}
+#accordeon .replier{
+    display: none;
 }
 .modif{
     background-color: #B6B6B6;
