@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_penche.png" alt="logo pour retourner à l'accueil" /></a>
+        <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_troue.png" alt="logo pour retourner à l'accueil" /></a>
         <a href="" id="bouton_deco"><img src="images/deco.png" alt="bouton pour se déconnecter" /></a>
         <h1>Interface administrateur</h1>
     </header>
@@ -41,58 +41,70 @@
 
 --------->
         
-        <div id="accordeon">
+        <div id="couleur">
             <div>
-                
-                <h2>Page visite 360<img src="images/fleche.png" class="fleche"/></h2>
-                <div class="onglet replier">
-                    <h3>Titre</h3>
-                    <div class="modif">
-                        <p contenteditable="true">Titre</p>
-                        <button type="button">Enregistrer les modifications</button>
-                    </div>
-                    <h3>Texte</h3>
-                    <div class="modif">
-                        <p contenteditable="true">Texte</p>
-                        <button type="button">Enregistrer les modifications</button>
-                    </div>
+                <h4>Couleur principale actuelle : </h4>
+                <p id="after">#28e43f</p>
+            </div>
+            <div>
+                <h4>Changer la couleur principale : </h4>
+                <input type="text" placeholder="Code hexadécimal de la nouvelle couleur" id="new_color">
+                <button id="color_button">Valider</button>
+            </div>
+            <p id="color_error"></p>
+        </div>
+        
+        
+        
+        <div id="accordeon">                
+            <h2>Page visite 360<img src="images/fleche.png" class="fleche"/></h2>
+            <div class="onglet replier">
+                <h3>Titre</h3>
+                <div class="modif">
+                    <p contenteditable="true">Titre</p>
+                    <button type="button">Enregistrer</button>
                 </div>
-                
-                <h2>Titre onglet<img src="images/fleche.png" class="fleche"/></h2>
-                <div class="onglet replier">
-                    <h3>Sous-titre</h3>
-                    <div class="modif">
-                        <p contenteditable="true">Sous titre</p>
-                        <button type="button">Enregistrer les modifications</button>
-                    </div>
-                    <h3>Textes</h3>
-                    <div class="modif">
-                        <p contenteditable="true">Texte</p>
-                        <button type="button">Enregistrer les modifications</button>
-                    </div>
-                    <h3>Photos historiques</h3>
-                    <div class="modif">
-                        <div id="photos">
-                            <img src="images/photos/accueil1.jpg" />
-                            <input type="checkbox" id="accueil1" name="accueil1">
-                            <img src="images/photos/caravanserail.jpg" />
-                            <input type="checkbox" id="caravanserail" name="caravanserail">
-                            <img src="images/photos/cinema1.jpg" />
-                            <input type="checkbox" id="cinema1" name="cinema1">
-                            <img src="images/photos/ecuries.jpg" />
-                            <input type="checkbox" id="ecuries" name="ecuries">
-                            <img src="images/photos/halle1.jpg" />
-                            <input type="checkbox" id="halle1" name="halle1">
-                            <img src="images/photos/halle10.jpg" />
-                            <input type="checkbox" id="halle10" name="halle10">
-                        </div>
-                        <div id="div_boutons">
-                            <button type="button">Supprimer les photos sélectionnées</button>
-                            <button type="button">Ajouter une photo</button>
-                            <button type="button">Enregistrer les modifications</button>
-                        </div>
-                    </div>
+                <h3>Texte</h3>
+                <div class="modif">
+                    <p contenteditable="true">Texte</p>
+                    <button type="button">Enregistrer</button>
                 </div>
+            </div>
+
+            <h2>Titre onglet<img src="images/fleche.png" class="fleche"/></h2>
+            <div class="onglet replier">
+                <h3>Sous-titre</h3>
+                <div class="modif">
+                    <p contenteditable="true">Sous titre</p>
+                    <button type="button">Enregistrer</button>
+                </div>
+                <h3>Textes</h3>
+                <div class="modif">
+                    <p contenteditable="true">Texte</p>
+                    <button type="button">Enregistrer</button>
+                </div>
+                <!--<h3>Photos historiques</h3>
+                <div class="modif">
+                    <div id="photos">
+                        <img src="images/photos/accueil1.jpg" />
+                        <input type="checkbox" id="accueil1" name="accueil1">
+                        <img src="images/photos/caravanserail.jpg" />
+                        <input type="checkbox" id="caravanserail" name="caravanserail">
+                        <img src="images/photos/cinema1.jpg" />
+                        <input type="checkbox" id="cinema1" name="cinema1">
+                        <img src="images/photos/ecuries.jpg" />
+                        <input type="checkbox" id="ecuries" name="ecuries">
+                        <img src="images/photos/halle1.jpg" />
+                        <input type="checkbox" id="halle1" name="halle1">
+                        <img src="images/photos/halle10.jpg" />
+                        <input type="checkbox" id="halle10" name="halle10">
+                    </div>
+                    <div id="div_boutons">
+                        <button type="button">Supprimer les photos sélectionnées</button>
+                        <button type="button">Ajouter une photo</button>
+                        <button type="button">Enregistrer les modifications</button>
+                    </div>
+                </div>-->
             </div>
         </div>
     </main>

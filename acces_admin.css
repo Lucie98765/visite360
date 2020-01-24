@@ -16,10 +16,12 @@
 /* Général */
 body{
     margin: 0;
-    --vert_ferme: #28e43f;
+    overflow-x: hidden;
+}
+:root{
+    --couleur_ferme: #28e43f;
     --rouge_ferme: #E10F21;
     --rouge_clair: #ed4c60;
-    overflow-x: hidden;
 }
 
 /* Header */
@@ -28,11 +30,11 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--vert_ferme);
+    background-color: var(--couleur_ferme);
     flex-wrap: wrap;
 }
 #logo_gauche{
-    background-color: var(--vert_ferme);    
+    background-color: var(--couleur_ferme);    
 }
 #logo_gauche img{
     width: 600px;
@@ -70,9 +72,48 @@ main{
     width: 55px;
     right: 8px;
 }
+#couleur{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 150px;
+}
+#couleur h4{
+    font-family: "main_gauche";
+    font-size: 24px;
+}
+#couleur div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#couleur p, #couleur input, #couleur button{
+    margin-left: 30px;
+}
+#couleur input{
+    width: 300px;
+    font-family: "regular_bau";
+}
+#after{
+    position: relative;
+}
+#after::after{
+    content: "";
+    height: 40px;
+    width: 100px;
+    background-color: var(--couleur_ferme);
+    position: absolute;
+    top: -15px;
+    left: 90px;
+}
 #accordeon{
     margin: 30px 150px;
     background-color: lightgray;
+}
+#couleur #color_error{
+    font-family: "regular_bau";
+    text-align: justify;
+    font-size: 14px;
+    margin-left: 0;
 }
 h2{
     background-color: var(--rouge_ferme);
@@ -126,9 +167,6 @@ h3{
     padding: 5px;
     font-size: 14px;
 }
-#accordeon button{
-    font-size: 12px;
-}
 #photos{
     display: flex;
     flex-direction: row;
@@ -161,5 +199,110 @@ h3{
     border-radius: 5px;
 }
 #photos .photoSelec{
-    border: 5px solid var(--vert_ferme);
+    border: 5px solid var(--couleur_ferme);
+}
+
+button{
+    font-family: "main_gauche";
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 7px;
+    color: black;
+    background-color: var(--couleur_ferme);
+}
+button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+/* Less than 1000px width */
+@media (max-width: 1000px){
+    #accordeon .modif{
+        flex-wrap: wrap;
+    } 
+    #accordeon .modif p{
+        width: 100%;
+    }
+    #logo_gauche img{
+        width: 300px;
+    }
+    h1{
+        font-size: 45px;
+    }
+    #bouton_deco{
+        margin: 30px;
+    }
+    #bouton_deco img{
+        width: 30px;
+    }
+    #accordeon{
+        margin: 30px 100px;
+    }
+    
+}
+
+@media (max-width: 800px) and (min-width: 600px){
+    #accordeon{
+        margin: 30px 50px;
+    }
+    #couleur{
+        margin: 30px 50px;
+    }
+    
+}
+
+@media (max-width: 599px){
+    #accordeon{
+        margin: 30px 20px;
+    }
+    #couleur{
+        margin: 30px 20px;
+    }
+    #logo_gauche img{
+        width: 200px;
+    }
+    #bouton_deco{
+        margin: 25px;
+    }
+    #bouton_deco img{
+        width: 25px;
+    }
+    #div_boutons button{
+        margin: 3px;
+        border-radius: 5px;
+        background-color: white;
+    }
+    #couleur h4{
+        width: 100%;
+        font-family: "main_gauche";
+        font-size: 24px;
+        text-align: center;
+        margin: 20px 0 10px 0;
+    }
+    #couleur div{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #after::after{
+        display: none;
+    }
+    #couleur p, #couleur input, #couleur button{
+        margin-left: 0;
+    }
+    #couleur button{
+        margin-top: 15px;
+    }
+    #couleur p{
+        margin-top: 5px;
+    }
+    #couleur input{
+        text-align: center;
+    }
+    #couleur #color_error{
+        margin-top: 15px;
+    }
 }
