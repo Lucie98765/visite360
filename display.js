@@ -17,6 +17,12 @@ function initialiser(evt) {
     var color_button = document.getElementById("color_button");
     color_button.addEventListener("click", update_color);
     
+    var display_help = document.getElementById("help_btn");
+    display_help.addEventListener("click", help);
+    
+    var close_help_btn = document.getElementById("close_help_btn");
+    close_help_btn.addEventListener("click", close_help);
+    
 }
 
 
@@ -46,4 +52,25 @@ function update_color() {
             p_error.innerHTML = "La couleur entrée n'est pas sous forme hexadécimal, elle doit contenir 6 caractères (par exemple : #28e43f).";
         } else root.style.setProperty('--couleur_ferme', '#' + new_color_value);
     }
+}
+
+function help(){
+    var help_window = document.getElementById("aide");
+    help_window.classList.remove("hide");
+    
+    var couleur = document.getElementById("couleur");
+    var accordeon = document.getElementById("accordeon");
+    couleur.classList.add("hide");
+    accordeon.classList.add("hide");
+    
+}
+
+function close_help(){
+    var help_window = document.getElementById("aide");
+    help_window.classList.add("hide");
+    
+    var couleur = document.getElementById("couleur");
+    var accordeon = document.getElementById("accordeon");
+    couleur.classList.remove("hide");
+    accordeon.classList.remove("hide");
 }
