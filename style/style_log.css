@@ -1,0 +1,82 @@
+@font-face {
+font-family: 'bau';
+src: url('../fonts/Bau/Bau-Regular.otf');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'bauItalic';
+src: url('../fonts/Bau/Bau-RegularItalic.otf');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'main-gauche';
+src: url('../fonts/main-gauche.otf');
+font-weight: normal;
+font-style: normal;
+}
+
+#login_page{
+	background: no-repeat url("../images/ferme.jpg");
+	margin:0;
+  	padding:0;
+  	background-color: black;
+	background-size : cover;
+	background-attachment:fixed;
+}
+#interface_admin{
+	background-color: red;
+}
+#logo{
+	display : table;
+	margin : 0 auto;
+	width: 8%;
+    margin-top: 13%;
+    opacity: 90%;
+
+}
+.form-example{
+	font-family:bau;
+	display : table;
+ 	margin : 0 auto;
+}
+
+#password, #name{
+	text-indent: 5px;
+}
+span{
+	margin : 0 auto;
+	display : table;
+	margin-top: 15px;
+	color: white;
+	font-family: main-gauche;
+	font-size : 20px;
+}
+#password, #name, #submit{
+	font-family:bau;
+	border-radius: 10px;
+	font-size : 15px;
+	margin-top: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border :0;
+	border-color: white;
+	color:white;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#error{
+	margin : 0 auto;
+	margin-top: 10px;
+	display : table;
+	font-family: bauItalic;
+	font-size: 13px;
+	text-align:center;
+	color:white;
+}
+#submit:hover{
+	background-color: rgba(255, 255, 255, 1);
+	color : #E10F21;
+}
