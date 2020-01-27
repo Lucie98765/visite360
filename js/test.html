@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="mediasHtml/favicon.png -->
+    <!-- <link rel="stylesheet" type="text/css" href="style/acces_admin.css"> -->
+    <title>Accès administrateur</title>
+    <!-- Mettre toutes les balises meta -->
+</head>
+
+<body>
+    <main>
+        <div id="nom_onglet"></div>
+        <div id="sous_titre"></div>
+        <div id="texte"></div>
+        <!-- <div id="nom_onglet"></div> -->
+    </main>
+<!--     <script >
+         function traduction(test) {
+            var split = test.split(' ');
+            var index_deb, index_fin ;
+            var contenu = '';
+            var debut = '';
+            var fin ='';
+            for (var i = 0; i < split.length; i++) {
+                if (split[i]==='[b]'){
+                    index_deb = i;
+                }
+                if(split[i]==='[/b]'){
+                    index_fin = i;
+                }
+                
+            }
+            for(var j = index_deb + 1; j<index_fin; j++){
+                contenu = contenu + split[j] + ' ';
+            }
+
+            for (var j = 0; j<index_deb; j++){
+                debut = debut + split[j] + ' ';
+            }
+            for (var j = index_fin+1; j<split.length; j++){
+                fin = fin + split[j] + ' ';
+            }
+            var span = document.createElement('span');
+            var span2 = document.createElement('span');
+            span2.innerHTML = fin;
+            span.appendChild(span2);
+            var bold = document.createElement('b');
+            bold.innerHTML = contenu;
+            span.appendChild(bold);
+            var span3 = document.createElement('span');
+            span3.innerHTML = fin;
+            span.appendChild(span3);
+            return span;
+         }
+        var div = document.getElementById('test');
+        var contenu = traduction(div.innerHTML);
+        div.replaceWith(contenu);
+    </script> -->
+    <script src="bbcode_trad.js"></script>
+    <script src="affichage.js"></script>
+<!--     <script >    
+        var div = document.getElementById('test');
+        var html = bbcodeParser.bbcodeToHtml(div.innerHTML);
+        console.log(html);
+        div.innerHTML = html;
+    </script> -->
+</body>
+
+</html>
