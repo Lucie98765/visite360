@@ -18,7 +18,6 @@ if (!isset($_SESSION['id_user'])){
     <link rel="stylesheet" type="text/css" href="style/acces_admin.css">
     <title>Accès administrateur</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Mettre toutes les balises meta -->
 </head>
 <body>
     <header>
@@ -27,6 +26,32 @@ if (!isset($_SESSION['id_user'])){
         <h1>Interface administrateur</h1>
     </header>
     <main>
+        <img src="images/help.png" alt="bouton d'aide" id="help_btn" />
+        <div id="aide" class="hide">
+            <h2>Aide <img src="images/close_help.png" alt="bouton permettant de fermer la fenêtre d'aide" id="close_help_btn"/></h2>
+            <ul>
+                <li>
+                    <p>Pour intégrer un lien : [url={votre lien}]{texte cliquable}[/url] </p>
+                    <p>Par exemple : [url={https://www.lafermedubuisson.com}]{Le site web de la Ferme du Buisson}[/url] </p>
+                    <p>donnera : <a href="https://www.lafermedubuisson.com">Le site web de la Ferme du Buisson</a> </p>
+                </li>
+                <li>
+                    <p>Pour mettre un texte en gras : [b]{TEXT}[/b]</p>
+                    <p>Par exemple : Le Théâtre se trouve [b]{au coeur du bâtiment central}[/b] de la Ferme du Buisson.</p>
+                    <p>donnera : Le Théâtre se trouve <strong>au coeur du bâtiment central</strong> de la Ferme du Buisson.</p>
+                </li>
+                <li>
+                    <p>Pour mettre un texte en italique : [i]{TEXT}[/i]</p>
+                    <p>Par exemple : Le Théâtre se trouve [i]{au coeur du bâtiment central}[/i] de la Ferme du Buisson.</p>
+                    <p>donnera : Le Théâtre se trouve <em>au coeur du bâtiment central</em> de la Ferme du Buisson.</p>
+                </li>
+                <li>
+                    <p>Pour souligner un texte : [u]{TEXT}[/u]</p>
+                    <p>Par exemple : Le Théâtre se trouve [u]{au coeur du bâtiment central}[/u] de la Ferme du Buisson.</p>
+                    <p>donnera : Le Théâtre se trouve <span style="text-decoration:underline;">au coeur du bâtiment central</span> de la Ferme du Buisson.</p>
+                </li>
+            </ul>
+        </div>
         <div id="couleur">
             <div>
                 <h4>Couleur principale actuelle : </h4>
