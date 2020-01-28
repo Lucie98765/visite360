@@ -36,6 +36,18 @@
     #p360 h2{
         font-size : 30px;
     }
+    
+    .points{
+        font-size: 30px;
+    }
+    
+    #logo_gauche img{
+        width: 300px;
+    }
+    
+    .container{
+        margin-top: -70px;
+    }
 }
 
 @media all and (min-width : 800px) and (max-width: 1200px) {
@@ -62,7 +74,6 @@
         width : 780px;
     }
     
-   
     #visite{
         width : 800px;
         height : 467px;
@@ -72,5 +83,34 @@
         height : 463px;
     }
     
+    .points{
+        font-size: 40px;
+    }
+    
+    #logo_gauche img{
+        width: 400px;
+    }
+    
+    .container{
+        margin-top: -100px;
+    }
+
 }
 
+@media all and (max-width: 499px) {
+    .container .points{
+        display: none;
+    }
+    
+    #logo_gauche img{
+        width: 200px;
+    }
+    
+    .container{
+        margin-top: -30px;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+}

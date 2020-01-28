@@ -54,7 +54,10 @@ h1{
 #bouton_deco img{
     width: 50px;
 }
-
+.points{
+    font-weight: lighter;
+    font-size: 50px;
+}
 /* Body */
 main{
     position: relative;
@@ -279,6 +282,9 @@ button:hover{
     #help_btn{
         top: 170px;
     }
+    .points{
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 800px) and (min-width: 600px){
@@ -347,5 +353,8 @@ button:hover{
     }
     #help_btn:hover{
         right: 3px;
+    }
+    .points{
+        display: none;
     }
 }

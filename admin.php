@@ -23,7 +23,7 @@ if (!isset($_SESSION['id_user'])){
     <header>
         <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_troue.png" alt="logo pour retourner à l'accueil" /></a>
         <a href="logout.php" id="bouton_deco"><img src="images/deco.png" alt="bouton pour se déconnecter" /></a>
-        <h1>Interface administrateur</h1>
+        <h1><span class="points">······&nbsp</span>Interface administrateur<span class="points">&nbsp······</span></h1>
     </header>
     <main>
         <img src="images/help.png" alt="bouton d'aide" id="help_btn" />
