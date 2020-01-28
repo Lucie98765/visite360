@@ -23,6 +23,7 @@ body{
 
 /* Titre */
 
+
 h1{
     font : 90px main-gauche;
     margin : 0;
@@ -93,6 +94,10 @@ h1 span{
 }
 
 /* Position des cibles sur la carte */
+
+#carte{
+    width : 100%;
+}
 
 #cible_ac_theatre{
     top : 75%;
