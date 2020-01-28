@@ -350,7 +350,7 @@ h1 span{
    
 }
 
-/*img de fond pour les lieux*/
+/*img de fond pour les lieux en responsive*/
 
 #lieux_responsive{
     display : none;
@@ -361,19 +361,40 @@ h1 span{
 }
 
 #lieu_ac_theatre .img_lieu{
-    background-image: url("img/fdb_theatre.jpg");
+    background-image: url("");
 }
 
 #lieu_ac_centre .img_lieu{
-    background-image: url("img/allee2.jpg");
+    background-image: url("");
 }
 
 #lieu_ac_auvent .img_lieu{
-    background-image: url("img/fdb.jpg");
+    background-image: url("");
+}
+
+#lieu_hall_theatre .img_lieu{
+    background-image: url("");
+}
+
+#lieu_hall_cinema .img_lieu{
+    background-image: url("");
+}
+
+#lieu_salon_bonus .img_lieu{
+    background-image: url("");
+}
+
+#lieu_centre_art .img_lieu{
+    background-image: url("");
+}
+
+
+#lieu_lieu_ruches .img_lieu{
+    background-image: url("");
 }
 
 .lieu .img_lieu{
-    background-image: url("img/allee2.jpg");
+    background-image: url("");
 }
 
 .img_lieu{
