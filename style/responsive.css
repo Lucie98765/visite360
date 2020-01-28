@@ -1,0 +1,78 @@
+
+@media all and (max-width : 800px) {
+    .container{
+        width : 95%;
+    }
+    .interface {
+        display : none !important;
+    }   
+    
+    h1{
+        font-size : 60px;
+    }
+    
+    .section-text{
+        font-size : 16px;
+    }
+    
+    /*Liste des lieux*/
+    #lieux_responsive{
+       display : block;
+    }
+    
+    #visite{
+        width : 100%;
+    }
+    
+    #slide div img{
+        width : 100%;
+        height : auto;
+    }
+    
+    #p360{
+        background-image : none;
+        background-color : black;
+    }
+    
+    #p360 h2{
+        font-size : 30px;
+    }
+}
+
+@media all and (min-width : 800px) and (max-width: 1200px) {
+    
+    .container{
+        width : 780px;
+    }
+    
+    h1{
+        font-size : 80px;
+        color : red;
+    }
+    
+    #popupInit{
+        font-size : 35px ;
+        width : 400px;
+        height : 180px;
+    }
+    
+    .interface{ 
+        width : 780px;
+    }
+    
+    #carte{
+        width : 780px;
+    }
+    
+   
+    #visite{
+        width : 800px;
+        height : 467px;
+    }
+   
+    #slide div img{
+        height : 463px;
+    }
+    
+}
+

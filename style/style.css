@@ -1,0 +1,441 @@
+@font-face {
+ font-family: "main-gauche";
+ src: url("../fonts/main-gauche.otf");
+}
+
+@font-face {
+ font-family: "bau-regular";
+ src: url("../fonts/Bau/Bau-Regular.otf");
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width : 1140px;
+    margin : auto;
+}
+
+/* Titre */
+
+h1{
+    font : 90px main-gauche;
+    margin : 0;
+    padding : 0 40px;
+    text-align : center;
+}
+
+h1 span{
+    background-color : white;
+}
+
+
+
+/* Initial popup */
+
+#popupInit{
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    width : 300px;
+    text-align : center;
+    font-size : 25px;
+    font-family : main-gauche;
+}
+
+#popupInit p {
+    padding : 15px;
+    margin : 5px 0;
+}
+
+/* MAP */
+
+.interface{
+    position : relative;
+    z-index : 0;
+    width : 1140px;
+    margin : 0;
+}
+
+.section-text{
+    font : 20px bau-regular;
+    text-align: center;
+}
+
+.cible{
+    display : block;
+    position : absolute;
+    max-width : 25px;
+    max-height : 25px;
+    transform: translate(-50%, -50%);
+}
+
+.cible:hover{
+    max-width : 30px;
+    max-height : 30px; 
+    cursor : pointer;
+    -webkit-filter: opacity(0.5) drop-shadow(0 0 0 red);
+    filter: opacity(0.5) drop-shadow(0 0 0 red);
+    /*
+    filter: hue-rotate(180deg);
+    -webkit-filter: hue-rotate(180deg);
+    */
+}
+
+.cible:hover~#nom_lieu{
+   display : block;
+}
+
+/* Position des cibles sur la carte */
+
+#cible_ac_theatre{
+    top : 75%;
+    left: 50%;
+}
+
+#cible_ac_centre{
+    top : 75%;
+    left: 35%;
+}
+
+#cible_ac_auvent{
+    top : 75%;
+    left: 65%;
+}
+
+#cible_salon_bonus{
+    left : 21%;
+    top : 48%;
+}
+
+#cible_hall_cinema{
+    left : 21%;
+    top : 38%;
+}
+
+#cible_ruches{
+    left : 65%;
+    top : 40%;    
+}
+
+#cible_centre_art{
+    left : 24%;
+    top : 80%;
+}
+
+
+#cible_centre_art_expo{
+    left : 19%;
+    top : 80%;
+}
+
+#cible_centre_art_expo2{
+    left : 19%;
+    top : 85%;
+}
+
+#cible_hall_theatre{
+    left : 50%;
+    top : 51%;
+}
+
+#cible_salle_theatre{
+    left : 50%;
+    top : 37%
+}
+
+
+#nom_lieu{
+    display : none;
+    top : 0;
+    left : 0;
+    position : absolute;
+    font-size : 25px;
+    padding : 0 5px;
+    z-index : 400;
+}
+
+/* INTERFACE 360 */
+
+/*Global*/
+
+#visite{
+    width : 1200px;
+    height : 700px;
+    display : flex;
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pFermer{
+    text-align: center;
+    font-size : 30px;
+    margin : 0;
+    position : absolute;
+    width : 100%;
+    left : 0;
+    bottom : 0;
+    cursor : pointer;
+}
+    
+    
+/*Hover Boutons*/
+
+#photosHistoriques{
+    cursor : pointer;
+}
+
+#photosHistoriques:hover{
+    color : white;
+    background-color:black;
+}
+
+#retour360:hover{
+    color : black;
+    background-color: #28E43F;
+}
+
+#pFermer:hover{
+    color : #E10F21;
+    background-color : white;
+    cursor : pointer;
+}
+
+#fermerTexte:hover{
+    color : #E10F21;
+    background-color : white;
+    cursor : pointer;
+}
+
+#cPopupInit:hover{
+    color : #28E43F;
+    background-color : white;
+    cursor : pointer;
+}
+
+/*Partie 360*/
+
+#p360{
+    position : relative;
+    width : 100%;
+    height : 100%;
+    overflow : hidden;
+}
+
+#p360 h2{
+    margin-top : 10px;
+    font-size : 40px;
+    padding : 5px;
+    cursor : pointer;
+}
+
+#p360 h3{
+    font-size : 30px;
+    position : absolute;
+    z-index: 3;
+    left : 50%;
+    bottom : 5%;
+    transform: translate(-50%, -50%);
+}
+
+#p360 h3:hover{
+    background-color : black;
+    color : white;
+}
+
+#slide div{
+   background-color : black;
+}
+
+#slide div img{
+    height : 695px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+/*Partie texte*/
+
+#info{
+    
+}
+
+#fermerTexte{
+    position : absolute;
+    top : 0;
+    right : 0;
+    font-size : 30px;
+    width : 30px;
+    text-align : center;
+}
+
+#pDescriptif h2{
+    font-size : 30px;
+    text-align: center;
+    margin : 0;
+}
+
+#pTexte{
+    z-index : 200;
+    position : absolute;
+    width : 30%;
+    height : 80%;
+    background-color : rgba(255,255,255,0.8);
+    right : 40px;
+    top : 80px;
+}
+
+
+#textContainer p{
+    padding : 20px;
+}
+
+/* General */
+
+#filter{
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100%;
+    min-height : 100%;
+    background-color : rgba(0,0,0,0.7);
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.visible{
+    display : visible;
+}
+
+.absCentered{
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absCenteredTop{
+    position : absolute;
+    width : 50%;
+    top: 0;
+    left: 0;
+    text-align : center;
+    transform: translate(50%, 0%);
+}
+
+/***************
+* LISTE DES LIEUX RESPONSIVE
+*****************/
+
+.lieu span{
+    margin : 0;
+    font : 22px main-gauche;
+    background-color : #28E43F;
+    color : black;
+    width : auto;
+    position : absolute;
+}
+
+.lieu{
+    display:  : inline-block;
+    height : 100px;
+    border : 1px dotted black;
+    margin : 8px 0;
+    
+   
+}
+
+/*img de fond pour les lieux*/
+
+#lieux_responsive{
+    display : none;
+}
+
+.lieu{
+    position : relative;
+}
+
+#lieu_ac_theatre .img_lieu{
+    background-image: url("img/fdb_theatre.jpg");
+}
+
+#lieu_ac_centre .img_lieu{
+    background-image: url("img/allee2.jpg");
+}
+
+#lieu_ac_auvent .img_lieu{
+    background-image: url("img/fdb.jpg");
+}
+
+.lieu .img_lieu{
+    background-image: url("img/allee2.jpg");
+}
+
+.img_lieu{
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    background-position : center;
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+}
+
+.img_lieu:hover{
+    -webkit-filter: grayscale(0%);
+}
+
+/***************
+* CHARTE GRAPHIQUE FERME DU BUISSON 
+****************/
+
+/*Typographies*/
+
+.main-gauche{
+    font-family : main-gauche;
+}
+
+.bau{
+    font-family : bau-regular;
+}
+
+/*Fonds*/
+
+.fondVert{
+    background-color : #28E43F;
+}
+
+.fondRouge{
+     background-color : #E10F21;
+}
+
+.fondNoir{
+    background-color: black;
+}
+
+.fondBlanc{
+    background-color : white;
+}
+
+
+/*Couleur Typo*/
+
+.typoVert{
+    color : #28E43F;
+}
+
+.typoRouge{
+    color : #E10F21;
+}
+
+.typoNoir{
+    color : black;
+}
+
+.typoBlanc{
+    color : white;
+}

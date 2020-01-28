@@ -1,5 +1,33 @@
-﻿body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+﻿iframe{
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 110%;
+    height : 100%;
 }
+
+canvas{
+    z-index: 0;
+}
+
+/*
+.tooltip{
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    opacity: 0;
+    
+    font-family : main-gauche;
+    transform: translate3d( -50%, -100%, 0); 
+    transition: opacity .3s, transform .3s;
+    cursor : pointer;
+}
+
+.tooltip.is-active {
+    opacity: 1;
+    transform: translate3d(-50%, calc(-100% - 20px), 0);
+    cursor : pointer;
+}*/
