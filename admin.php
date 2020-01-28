@@ -54,11 +54,11 @@ if (!isset($_SESSION['id_user'])){
         </div>
         <div id="couleur">
             <div>
-                <h4>Couleur principale actuelle : </h4>
+                <h4>Couleur principale actuelle&nbsp: </h4>
                 <p id="after">#28e43f</p>
             </div>
             <div>
-                <h4>Changer la couleur principale : </h4>
+                <h4>Changer la couleur principale&nbsp: </h4>
                 <input type="text" placeholder="Code hexadécimal de la nouvelle couleur" id="new_color">
                 <button id="color_button">Valider</button>
             </div>
