@@ -361,41 +361,41 @@ h1 span{
 }
 
 #lieu_ac_theatre .img_lieu{
-    background-image: url("");
-}
-
-#lieu_ac_centre .img_lieu{
-    background-image: url("");
+    background-image: url("../images/background-responsive/fdb_theatre.jpg");
 }
 
 #lieu_ac_auvent .img_lieu{
-    background-image: url("");
+    background-image: url("../images/background-responsive/ac_auvent.png");
 }
 
 #lieu_hall_theatre .img_lieu{
-    background-image: url("");
+    background-image: url("../images/background-responsive/hall_theatre.png");
+}
+
+#lieu_salle_theatre .img_lieu{
+    background-image: url("../images/background-responsive/scene_theatre.jpg");
 }
 
 #lieu_hall_cinema .img_lieu{
-    background-image: url("");
+    background-image: url("../images/background-responsive/hall_cinema.png");
 }
 
 #lieu_salon_bonus .img_lieu{
-    background-image: url("");
+    background-image: url("../images/background-responsive/salon_bonus.jpg");
 }
 
 #lieu_centre_art .img_lieu{
-    background-image: url("");
+    background-image: url("../images/background-responsive/ac_centre_art.png");
 }
 
-
-#lieu_lieu_ruches .img_lieu{
-    background-image: url("");
+#lieu_ruches .img_lieu{
+    background-image: url("../images/background-responsive/ruches.png");
 }
 
-.lieu .img_lieu{
-    background-image: url("");
+#lieu_salle_theatre{
+    background-image: url("../images/background-responsive/ruches.png");
 }
+
 
 .img_lieu{
     position: absolute;
