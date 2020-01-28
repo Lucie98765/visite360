@@ -25,7 +25,8 @@ http_response_code(200);
 $stmt = $bdd->prepare(<<<SQL
 	SELECT nom_onglet
 	FROM onglet
-SQL);
+SQL
+                     );
 
 $stmt->execute();
 $tmp_nom_onglet = $stmt->fetchAll();

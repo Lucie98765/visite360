@@ -18,15 +18,12 @@ document.ready( () => {
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = () => {
 		if(request.readyState == 4) {
-			//console.log(request.status);
 			if(request.status == 200)
 			{
-				//console.log(request.status);
 				var response = JSON.parse(request.responseText);
 				nouveau_titre.innerHTML = response['titre'];
 				ancien_titre.innerHTML = response['titre'];
 				texte.innerHTML = response['texte'];
-				//console.log(response);
 			}
 		
 		}

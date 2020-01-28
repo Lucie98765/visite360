@@ -69,7 +69,7 @@ if (!isset($_SESSION['id_user'])){
                 <div class="onglet replier">
                     <h3>Titre</h3>
                     <div class="modif">
-                        <p contenteditable="true" id="nouveau_titre">Coucou lol</p>
+                        <p contenteditable="true" id="nouveau_titre">Nouveau titre</p>
                         <button type="button" id="submit_modification_titre">Enregistrer</button>
                     </div>    
                     <h3>Texte</h3>
