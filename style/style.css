@@ -98,7 +98,7 @@ h1 span{
     display: block;
 }
 
-#div_ex_cible::after{
+#div_ex_cible::after, #div_ex_info::after, #div_ex_photo_arch::after{
     position: absolute;
     display: none;
     content: "Vue 360 du point";
@@ -112,29 +112,13 @@ h1 span{
 }
 
 #div_ex_info::after{
-    position: absolute;
-    display: none;
     content: "Informations liées au point";
-    font-family: "bau-regular";
-    font-size: 14px;
-    color: black;
     bottom: -25px;
-    left: 0;
-    text-align: center;
-    background-color: white;
 }
 
 #div_ex_photo_arch::after{
-    position: absolute;
-    display: none;
     content: "Photos d'archives";
-    font-family: "bau-regular";
-    font-size: 14px;
-    color: black;
     bottom: -10px;
-    left: 0;
-    text-align: center;
-    background-color: white;
 }
 
 #cPopupInit{
