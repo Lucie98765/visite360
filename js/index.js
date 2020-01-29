@@ -1,3 +1,5 @@
+var pouet = "pouet";
+
 $(document).ready(function(){
         $("canvas").prependTo("iframe");
         $("canvas").addClass("visible");
@@ -29,6 +31,8 @@ $(document).ready(function(){
             e.preventDefault();
             $("#visite").removeClass("invisible").addClass("visible");
             $("#filter").removeClass("invisible").addClass("visible");
+            globalThis.pouet = "prout";
+            console.log(globalThis.pouet);
         });
         
         $("#pFermer").click(function(){
@@ -89,6 +93,4 @@ $(document).ready(function(){
         }
        
 });
-
-
     

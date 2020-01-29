@@ -48,6 +48,12 @@
     .container{
         margin-top: -70px;
     }
+    
+    #popupInit{
+        font-size : 25px;
+        width : 300px;
+        height : 180px;
+    }
 }
 
 @media all and (min-width : 800px) and (max-width: 1200px) {
@@ -61,9 +67,9 @@
     }
     
     #popupInit{
-        font-size : 35px ;
-        width : 400px;
-        height : 180px;
+        font-size : 25px;
+        width : 300px;
+        /*height : 180px;*/
     }
     
     .interface{ 
@@ -112,5 +118,9 @@
     
     h1{
         font-size: 40px;
+    }
+    
+    #popupInit{
+        width: 250px;
     }
 }

@@ -292,10 +292,12 @@ controls.update()
 //UPDATING CAMERA RENDER
 
 function animate() {
-
-	requestAnimationFrame( animate );
-	renderer.render( scene, camera );
+    //console.log(window.pouet)
+	
+    requestAnimationFrame( animate )
+	renderer.render( scene, camera )
     
+
 }
 
 function onClick(e) {
@@ -346,3 +348,5 @@ animate()
 window.addEventListener('resize', onResize)
 container.addEventListener('click', onClick)
 container.addEventListener('mousemove', onMouseMove )
+
+

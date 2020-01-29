@@ -57,16 +57,91 @@ h1 span{
     top : 50%;
     left : 50%;
     transform: translate(-50%, -50%);
-    width : 300px;
+    width : 400px;
+    height: 200px;
     text-align : center;
-    font-size : 25px;
+    font-size : 35px ;
     font-family : main-gauche;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #popupInit p {
     padding : 15px;
-    margin : 5px 0;
+    margin : 5px auto;
+    width: 90%;
+    padding-bottom: 0;
 }
+
+#popupInit div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#popupInit img{
+    margin: 15px 15px 25px 15px;
+}
+
+.pastille_ex{
+    width: 40px;
+    cursor: pointer;
+}
+
+#div_ex_cible, #div_ex_info, #div_ex_photo_arch{
+    position: relative;
+}
+
+#div_ex_cible:hover::after, #div_ex_info:hover::after, #div_ex_photo_arch:hover::after{
+    display: block;
+}
+
+#div_ex_cible::after{
+    position: absolute;
+    display: none;
+    content: "Vue 360 du point";
+    font-family: "bau-regular";
+    font-size: 14px;
+    color: black;
+    bottom: -10px;
+    left: 0;
+    text-align: center;
+    background-color: white;
+}
+
+#div_ex_info::after{
+    position: absolute;
+    display: none;
+    content: "Informations liées au point";
+    font-family: "bau-regular";
+    font-size: 14px;
+    color: black;
+    bottom: -25px;
+    left: 0;
+    text-align: center;
+    background-color: white;
+}
+
+#div_ex_photo_arch::after{
+    position: absolute;
+    display: none;
+    content: "Photos d'archives";
+    font-family: "bau-regular";
+    font-size: 14px;
+    color: black;
+    bottom: -10px;
+    left: 0;
+    text-align: center;
+    background-color: white;
+}
+
+#cPopupInit{
+    width: 100%;
+    padding-top: 7px;
+}
+
 
 /* MAP */
 
