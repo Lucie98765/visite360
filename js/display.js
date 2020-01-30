@@ -41,15 +41,12 @@ $(document.body).on('click','#color_button',function(){
 	if(ancienne_couleur.innerHTML)
 		params['ancienne_couleur'] = ancienne_couleur.innerHTML;
 	var body = JSON.stringify(params);
-	console.log(body);
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = () => {
 		if(request.readyState == 4) {
-			console.log(request.readyState);
 			if(request.status == 200)
 			{
 				var response = JSON.parse(request.responseText);
-				console.log(response);
 				alert(response);
 				window.location.reload();
 			}
@@ -76,8 +73,6 @@ document.ready( () => {
 	//affiche partie page
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = () => {
-		console.log(request.readyState);
-		console.log(request.status);
 		if(request.readyState == 4) {
 			if(request.status == 200)
 			{
@@ -94,7 +89,6 @@ document.ready( () => {
 					root.style.setProperty('--couleur_ferme', '#' + response);
 				}
 					
-				console.log(response);
 			}
 		
 		}

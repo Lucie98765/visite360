@@ -3,8 +3,13 @@
         width : 95%;
     }
     .interface {
-        display : none !important;
-    }   
+        width: 100%;
+    }
+    
+    .interface #carte{
+        display: none !important;
+    }
+    
     
     h1{
         font-size : 60px;
@@ -54,6 +59,94 @@
         width : 300px;
         height : 180px;
     }
+    
+    .info, .archive, .cible{
+        display: none;
+    }
+    #info_theatre{
+        display: block;
+        top : 80px;
+        right : 0px;
+        left: auto;
+    }
+    #archive_theatre{
+        display: block;
+        top : 80px;
+        right: 30px;
+        left: auto;
+    }
+    #info_auvent{
+        display: block;
+        top: 410px;
+        right : 0px;
+        left: auto;
+    }
+    #info_cinema{
+        display: block;
+        top: 520px;
+        right : 0px;
+        left: auto;
+    }
+    #archive_cinema{
+        display: block;
+        top: 520px;
+        right : 30px;
+        left: auto;
+    }
+    #info_centre_art{
+        display: block;
+        top: 740px;
+        right : 0px;
+        left: auto;
+    }
+    #info_caravanserail{
+        display: block;
+        top: 850px;
+        right : 0px;
+        left: auto;
+    }
+    #archive_caravanserail{
+        display: block;
+        top: 850px;
+        right : 30px;
+        left: auto;
+    }
+    #info_ruche{
+        display: block;
+        top: 960px;
+        right : 0px;
+        left: auto;
+    }
+    #archive_ruche{
+        display: block;
+        top: 960px;
+        right : 30px;
+        left: auto;
+    }
+    #nom_info, #nom_archive{
+        display: none !important;
+    }
+    
+    #pTexte{
+        width: 90%;
+        right: 5%;
+    }
+    
+    #carrousel{
+        top : 300px !important;
+    }
+    #carrousel ul{
+        width: 500px !important;
+    }
+    
+    .next{
+        right: 0px !important;
+        top: 20vh !important;
+    }
+    .prev{
+        left: 0px !important;
+        top: 20vh !important;
+    }
 }
 
 @media all and (min-width : 800px) and (max-width: 1200px) {
@@ -97,8 +190,24 @@
 
     #textContainer{
         overflow-y: auto;
-        height: 300px;
+        height: 70vh;
     }  
+    
+    #carrousel{
+        top : 150px !important;
+    }
+    #carrousel ul{
+        width: 800px !important;
+    }
+    
+    .next{
+        right: 0px !important;
+        top: 30vh !important;
+    }
+    .prev{
+        left: 0px !important;
+        top: 30vh !important;
+    }
 
 }
 
@@ -121,5 +230,21 @@
     
     #popupInit{
         width: 250px;
+    }
+    
+    #carrousel{
+        top : 250px !important;
+    }
+    #carrousel ul{
+        width: 400px !important;
+    }
+    
+    .next{
+        right: 0px !important;
+        top: 15vh !important;
+    }
+    .prev{
+        left: 0px !important;
+        top: 15vh !important;
     }
 }

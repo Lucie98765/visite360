@@ -10,31 +10,49 @@
 	display: block;
 }
 .next,.prev,.fermer{
-	font: 50px main-gauche;
-	position: relative;
+	font: 45px main-gauche;
+	position: absolute;
+    z-index: 200;
+    background-color: #E10F21;
+    color: white;
+    padding: 2px;
+}
+.next:hover,.prev:hover,.fermer:hover{
+    background-color: white;
+    color: #E10F21;
 }
 .image{
-	width : 800px;
+	width : 100%;
 	text-align: center;
 	position: relative;
 }
 .next{
-	/*margin-top: -30%;*/
-	margin-left: 70%;
+    right: 5px;
+    top: 40vh;
+    padding-bottom: 10px;
 }
 .prev{
-	margin-top: -30%;
+    left: 5px;
+    top: 40vh;
+    padding-bottom: 10px;
 }
 .fermer{
-	margin-top: -20%;
-	margin-left: 70%;
+    top: 0;
+    right: 0;
 }
 #carrousel{
-	background-color: red;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:;
+    position : fixed;
+    width: 100%;
+    top: 80px;
+    left: 0;
 }
-
-
-
+#carrousel ul{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#carrousel ul, #carrousel li, #carrousel img{
+    margin: auto;
+    padding: 0;
+}

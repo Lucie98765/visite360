@@ -66,7 +66,7 @@ $(document).ready(function(){
             $("iframe").attr("src","app/index11.html");
         });
     
-         $("#cible_caravanserail").click(function(e){
+         $("#cible_caravanserail, #lieu_caravanserail").click(function(e){
             e.preventDefault();  
             $("iframe").attr("src","app/index12.html");
         });
@@ -102,6 +102,9 @@ $(document).ready(function(){
         $(".info").click(function(e){
             e.preventDefault();
             $("#pTexte").removeClass("invisible").addClass("visible");
+            if ($( window ).width()< 800) {
+                $("#filter").removeClass("invisible").addClass("visible");
+            }
         });
         
         $("#pFermer").click(function(){
@@ -115,7 +118,8 @@ $(document).ready(function(){
                 $("#photosHistoriques").removeClass("visible").addClass("invisible");
                 $("#retour360").removeClass("invisible").addClass("visible");
                 $("#carrousel").removeClass("invisible").addClass("visible");
-                $("iframe").removeClass("visible").addClass("invisible");
+                
+                $("#filter").removeClass("invisible").addClass("visible");
             });
         
             //De photos historiques à vue 360
@@ -129,6 +133,7 @@ $(document).ready(function(){
             //fermer texte
             $("#fermerTexte").click(function(){
                 removeText();
+                $("#filter").removeClass("visible").addClass("invisible");
             });
         
             $(".info").click(function(){

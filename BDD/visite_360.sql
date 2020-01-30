@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 30, 2020 at 09:35 AM
--- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- Generation Time: Jan 30, 2020 at 06:51 PM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -156,7 +156,8 @@ INSERT INTO `Sous_titre` (`id_sous_titre`, `texte_sous_titre`, `id_onglet`) VALU
 (14, 'Dans ses murs chargés d’histoire, entouré du Cinéma et du Centre d’art, Le Relais du Buisson offre l’occasion de moments gourmands et privilégiés. Il propose une formule qui allie repas et cinéma.', 14),
 (15, 'La Ferme du Buisson est dedans-dehors. Les espaces extérieurs sur le site sont aussi un théâtre où aucun recoin n\'est à l’abri de la curiosité. Entre les ruches, le potager partagé, les poules et les hot pots, les jardins sont aussi un lieu de détente.', 15),
 (16, 'Chapiteau permanent dessiné en 2003 par Patrick Bouchain, le Caravansérail est fait de bois et de toiles, déploie un grand parquet et cache des portes relevables pour du semi-plein air. Un lieu de rassemblement par excellence.', 16),
-(17, 'Le Cinéma, c’est près de 250 films et 3000 séances chaque année. Classé \"Art et essai\" et labellisé \"Recherche & découverte\", \"Jeune public\" et \"Patrimoine & répertoire\", il offre des films venus de tous les horizons pour tous les âges, des rencontres rares et des événements atypiques.', 17);
+(17, 'Le Cinéma, c’est près de 250 films et 3000 séances chaque année. Classé \"Art et essai\" et labellisé \"Recherche & découverte\", \"Jeune public\" et \"Patrimoine & répertoire\", il offre des films venus de tous les horizons pour tous les âges, des rencontres rares et des événements atypiques.', 17),
+(18, 'La Médiathèque de la Ferme du Buisson, membre du réseau des médiathèques de Paris - Vallé de la Marne et de Seine-et-Marne, propose ses services aux curieux. Abritée sous une magnifique verrière, elle dispose d’un fond spécialisé dans le domaine de l’art.\r\n', 5);
 
 -- --------------------------------------------------------
 
@@ -179,7 +180,7 @@ INSERT INTO `Texte` (`id_texte`, `texte`, `id_onglet`) VALUES
 (6, 'Pas la peine de prendre son maillot de bain : située dans le pavillon côté Ouest, la Piscine doit simplement son nom à sa dénivellation par rapport à la cour pavée. Cela permettait de conserver le lait au frais à l\'époque fermière du lieu. Aujourd\'hui, cette pièce sert à de multiples usages, de l’espace d’exposition (pendant le PULP Festival) à la salle de réunion. La Piscine est entourée de la maison du gardien et de locaux réservés au personnel. Autrefois logements des fermiers, réfectoire, buanderie et maréchalerie, les fonctions de ces espaces sont finalement restées les mêmes. Au-dessus d\'eux, des pièces en enfilade cachent parfois des installations immersives.', 2),
 (8, 'Dès les débuts de la réhabilitation de la friche industrielle, cette grange du pavillon Ouest est devenue le berceau des programmations artistiques de la Ferme du Buisson. Le lieu possède un rez-de-chaussée où un bar éphémère s\'anime parfois entre les tapis persans, les cornes de buffles et les meubles de récupération.\r\nC’est son implantation à l’étage, sa confidentialité et son charme qui lui confèrent son appellation. Espace secret, perché, le Grenier peut s’ouvrir sur l’Auvent qui le sépare de l’actuelle Médiathèque. Il accueille les formes les plus hybrides, de la danse à la performance, du salon de musique au plateau de théâtre. Cette salle peut recevoir 80 spectateurs.\r\nLe Grenier est accessible aux personnes à mobilité réduite (un ascenseur permet d\'accéder à la salle qui se trouve à l\'étage).', 3),
 (11, 'Cour abritée et située entre le Grenier et la Médiathèque, l’Auvent offre un volume qui est fréquemment utilisé pour des rencontres artistiques qui sortent des sentiers battus. Jonction entre les spectacles en intérieur et les arts de la rue, il accueille de nombreux moments mêlant espaces fondus, interactions physiques et surprises artistiques.\r\nSous cette charpente de ferraille s\'organisent également des marchés alimentaires, des foires aux livres, des bourses aux jouets ou des après-midis de jeux en bois lors de certains événements. L\'Auvent reçoit également La Ruche qui dit Oui de Noisiel le samedi, une communauté qui permet de réunir citoyens et producteurs locaux.', 4),
-(13, 'La Médiathèque de la Ferme du Buisson, membre du réseau des médiathèques de Paris - Vallé de la Marne et de Seine-et-Marne, propose ses services aux curieux. Abritée sous une magnifique verrière, elle dispose d’un fond spécialisé dans le domaine de l’art.\r\n\r\nMagnifique bâtiment restauré et situé dans l’aile ouest de la Ferme du Buisson, la Médiathèque a été inaugurée en décembre 2004. Cet équipement public est géré par la Communauté d’Agglomération Paris - Vallé de la Marne. Sous sa grande verrière, la Médiathèque dispose de 73 000 documents dont un fond spécialisé dans le domaine de l’art : livres, revues, CD, textes enregistrés, DVD.', 5),
+(13, 'Magnifique bâtiment restauré et situé dans l’aile ouest de la Ferme du Buisson, la Médiathèque a été inaugurée en décembre 2004. Cet équipement public est géré par la Communauté d’Agglomération Paris - Vallé de la Marne. Sous sa grande verrière, la Médiathèque dispose de 73 000 documents dont un fond spécialisé dans le domaine de l’art : livres, revues, CD, textes enregistrés, DVD.', 5),
 (15, 'Alors que le destin des abeilles des champs s’est assombri et vire à l’hécatombe – plus de 14 milliards d’abeilles ont disparu en France depuis 1997 – la pollenisation des villes et des espaces péri-urbains est en marche ! Dans un esprit militant et pour participer à la pollenisation de son territoire, la Ferme du Buisson, grâce aux Ruchers de la Bruyère, a installé 3 ruches dans l\'enceinte de ses murs.\r\n\r\nLes Ruchers de la Bruyère produisent du miel et font de l\'élevage de reines et d\'essaims Buckfast, une race d\'abeilles peu agressives, qui butinent dans un rayon de 3 km. La production est artisanale : après la récolte, le miel est décanté naturellement, puis mis en pot de verre. Les miels ne sont ni mélangés, ni chauffés et proviennent exclusivement des ruchers de l\'exploitation.\r\n\r\nNous proposons également, avec nos apiculteurs complices Guy-Noël ou Enora Javaudin, des ateliers pour petits et grands, afin de venir s\'initier et découvrir la vie des abeilles et le fonctionemment de la ruche. Profitez d\'un atelier d\'apiculture pour également faire un tour dans notre jardin partagé juste à côté ou faire un atelier de jardinage.', 6),
 (18, 'Ancienne grange-étable, la Halle a gardé le caractère originel du site avec ses charpentes en fer et ses murs à découvert. Faisant face à l\'Abreuvoir, cette immense pièce modulable avec une grande hauteur sous plafond, permet de créer des scénographies multiples. La Halle s’adapte aux différents rendez-vous artistiques : représentations assises en frontal ou multi-frontal, concerts debouts, expositions... Elle permet ainsi de mettre à disposition 210 places assises et jusqu\'à 800 spectateurs debouts.\r\nLa Halle est accessible aux personnes à mobilité réduite.', 7),
 (20, 'Autrefois magasin pour les ouvriers de la Cité Menier, l\'Abreuvoir est vêtu de vieilles briques et de colonnes en ferraille. Son plafond bas et ses dimensions modestes en font un lieu chaleureux pour des installations, des concerts, des débats, des cabarets et des soirées. Espace totalement modulable – à l’image de la Halle qui lui fait face –, il peut en effet se prévaloir de pouvoir accueillir de nombreux types de propositions artistiques.\n\nDepuis 2008, l’Abreuvoir à musiques est le rendez-vous des musiques éclectiques de la Ferme du Buisson. Son caractère underground, en forme de friche urbaine, décorée de containers et de braseros, en fait un espace festif et convivial qui fédère un public bigarré autour du meilleur son de la scène musicale actuelle. Espace de concert unique en son genre, il accueille jusqu’à 400 mélomanes debout.\n\nL\'Abreuvoir est accessible aux personnes à mobilité réduite.', 8),
@@ -294,7 +295,7 @@ ALTER TABLE `Photo`
 -- AUTO_INCREMENT for table `Sous_titre`
 --
 ALTER TABLE `Sous_titre`
-  MODIFY `id_sous_titre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_sous_titre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `Texte`

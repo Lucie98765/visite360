@@ -1,265 +1,268 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Visite 360</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
+
     <link href="style/style.css" rel="stylesheet">
     <link href="style/responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="style/screen.css" />
-    <link rel="stylesheet" href="style/diapo_style.css" /> 
-      
+    <link rel="stylesheet" href="style/diapo_style.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>  
-      
-  </head>
-  <body>
-        <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_penche_rouge.png" alt="logo pour retourner à l'accueil" /></a>
-      
-      <!-- Page d'accueil -->
-      <div class = "container">
-          
-          <h1><span class="points">······&nbsp</span><span>Visite 360</span><span class="points">&nbsp······</span></h1>
-          <div></div>
-          <div class = "section-text">
-              <p>La Ferme du Buisson est un lieu de patrimoine et d'innovation unique en son genre. 
-                  Espaces de plein air, salles de spectacles, cinéma et centre d’art contemporain forment 
-                  aujourd'hui un centre de fabrique et de diffusion de l’art, un point de convergence entre
-                  les publics et la création. Par ici la visite&nbsp! </p>
-          </div>
-          
-          <div id = "lieux_responsive">
-              <div id = "lieu_ac_theatre" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Allée centrale : théâtre</span>
-              </div>
-               
-              <div id = "lieu_ac_auvent" class = "lieu">
-                    <div class = "img_lieu"></div>
+    <script type="text/javascript" src="js/index.js"></script>
+
+</head>
+
+<body>
+    <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_penche_rouge.png" alt="logo pour retourner à l'accueil" /></a>
+
+    <!-- Page d'accueil -->
+    <div class="container">
+
+        <h1><span class="points">······&nbsp</span><span>Visite 360</span><span class="points">&nbsp······</span></h1>
+        <div></div>
+        <div class="section-text">
+            <p>La Ferme du Buisson est un lieu de patrimoine et d'innovation unique en son genre.
+                Espaces de plein air, salles de spectacles, cinéma et centre d’art contemporain forment
+                aujourd'hui un centre de fabrique et de diffusion de l’art, un point de convergence entre
+                les publics et la création. Par ici la visite&nbsp! </p>
+        </div>
+
+
+
+        <div class="interface">
+
+            <div id="lieux_responsive">
+                <div id="lieu_ac_theatre" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Allée centrale : théâtre</span>
+                </div>
+
+                <div id="lieu_hall_theatre" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Hall du théâtre</span>
+                </div>
+
+                <div id="lieu_salle_theatre" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Scène du théâtre</span>
+                </div>
+
+                <div id="lieu_ac_auvent" class="lieu">
+                    <div class="img_lieu"></div>
                     <span>Allée centrale : côté auvent</span>
-              </div>
-              
-              <div id = "lieu_hall_theatre" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Hall du théâtre</span>
-              </div>
-              
-              <div id = "lieu_salle_theatre" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Scène du théâtre</span>
-              </div>
-              
-              <div id = "lieu_hall_cinema" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Hall du cinéma</span>
-              </div>
-              
-              <div id = "lieu_salon_bonus" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Salon des bonus</span>
-              </div>
-              
-              <div id = "lieu_centre_art" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Centre d'art</span>
-              </div>
-              
-              <div id = "lieu_ruches" class = "lieu">
-                  <div class = "img_lieu"></div>
-                  <span>Ruches</span>
-              </div>
-           
-          </div>
-          
-          <div class = "interface">
-              
+                </div>
+
+                <div id="lieu_hall_cinema" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Hall du cinéma</span>
+                </div>
+
+                <div id="lieu_salon_bonus" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Salon des bonus</span>
+                </div>
+
+                <div id="lieu_centre_art" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Centre d'art</span>
+                </div>
+
+                <div id="lieu_caravanserail" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Caravanserail</span>
+                </div>
+
+                <div id="lieu_ruches" class="lieu">
+                    <div class="img_lieu"></div>
+                    <span>Ruches</span>
+                </div>
+
+            </div>
+
             <!-- CIBLES -->
-              
-            <img id = "cible_ac_theatre" class = "cible" src = "images/cible.png" alt = "Allée centrale theatre" />
-              
-            <img id = "cible_ac_centre" class = "cible" src = "images/cible.png" alt = "Allée centrale centre d'art" />
-              
-            <img id = "cible_ac_auvent" class = "cible" src = "images/cible.png" alt = "Allée centrale auvent" />
-              
-            <img id = "cible_salon_bonus" class = "cible" src = "images/cible.png" alt = "Salon des bonus" />
-              
-            <img id = "cible_hall_cinema" class = "cible" src = "images/cible.png" alt = "Hall du cinéma" />
-              
-            <img id = "cible_ruches" class = "cible" src = "images/cible.png" alt = "Ruches" />
-              
-            <img id = "cible_centre_art_expo" class = "cible" src = "images/cible.png" alt = "Salle d'expo 1" />  
-              
-            <img id = "cible_centre_art_expo2" class = "cible" src = "images/cible.png" alt = "Salle d'expo 2" /> 
-              
-            <img id = "cible_centre_art" class = "cible" src = "images/cible.png" alt = "Hall du centre d'art" />
-              
-            <img id = "cible_hall_theatre" class = "cible" src = "images/cible.png" alt = "Hall du théâtre" />
-              
-            <img id = "cible_salle_theatre" class = "cible" src = "images/cible.png" alt = "Salle de théâtre" />
-              
-             <img id = "cible_caravanserail"  class = "cible" src = "images/cible.png" alt = "Caravansérail" />
-              
-            <span id = "nom_lieu" class = "fondVert main-gauche invisible">Lieu</span> 
-              
-             <!-- POINTS INFO -->
-              
-            <img lieu = "theatre" id = "info_theatre" class = "info" src = "images/info.png" alt = "Info théâtre" />
-              
-            <img lieu = "piscine" id = "info_piscine" class = "info" src = "images/info.png" alt = "Info piscine" />
-              
-            <img lieu = "grenier" id = "info_grenier" class = "info" src = "images/info.png" "Info Grenier" />
-              
-            <img lieu = "auvent" id = "info_auvent" class = "info" src = "images/info.png" alt = "Info Auvent"/>
-              
-            <img lieu = "mediatheque" id = "info_mediatheque" class = "info" src = "images/info.png" alt = "Info Médiathèque" />
-              
-            <img lieu = "ruches" id = "info_ruche" class = "info" src = "images/info.png" alt = "Info Ruche" />
-              
-            <img lieu = "abreuvoir" id = "info_abreuvoir" class = "info" src = "images/info.png" alt = "Info Abreuvoir"/>
-            
-            <img lieu = "ecuries" id = "info_ecuries" class = "info" src = "images/info.png" alt = "Info écuries"/>
-              
-            <img lieu = "studio" id = "info_studio" class = "info" src = "images/info.png" alt = "Info studio"/>
-              
-            <img lieu = "arriere_sc" id = "info_arriere_scene" class = "info" src = "images/info.png" alt = "Info arrière scène" />
-              
-            <img lieu = "accueil" id = "info_accueil" class = "info" src = "images/info.png" alt = "Info accueil" />
-              
-            <img lieu = "centre_art" id = "info_centre_art" class = "info" src = "images/info.png" alt = "Info centre d'art"/>
-              
-            <img lieu = "relais" id = "info_relai" class = "info" src = "images/info.png" alt = "Info relai" />
-              
-            <img lieu = "jardins" id = "info_jardin" class = "info" src = "images/info.png" alt = "Info jardin"/>
-              
-            <img id = "info_caravanserail" class = "info" src = "images/info.png" alt = "Info Caravansérail" />  
-              
-            <img lieu = "cinema" id = "info_cinema" class = "info" src = "images/info.png" alt = "Info Cinéma" />  
-              
-            <img lieu = "halle" id = "info_halle" class = "info" src = "images/info.png" alt = "Info halle" /> 
-              
-            <span id = "nom_info" class = "fondRouge main-gauche typoBlanc invisible">Info</span>  
-              
-              
+
+            <img id="cible_ac_theatre" class="cible" src="images/cible.png" alt="Allée centrale theatre" />
+
+            <img id="cible_ac_centre" class="cible" src="images/cible.png" alt="Allée centrale centre d'art" />
+
+            <img id="cible_ac_auvent" class="cible" src="images/cible.png" alt="Allée centrale auvent" />
+
+            <img id="cible_salon_bonus" class="cible" src="images/cible.png" alt="Salon des bonus" />
+
+            <img id="cible_hall_cinema" class="cible" src="images/cible.png" alt="Hall du cinéma" />
+
+            <img id="cible_ruches" class="cible" src="images/cible.png" alt="Ruches" />
+
+            <img id="cible_centre_art_expo" class="cible" src="images/cible.png" alt="Salle d'expo 1" />
+
+            <img id="cible_centre_art_expo2" class="cible" src="images/cible.png" alt="Salle d'expo 2" />
+
+            <img id="cible_centre_art" class="cible" src="images/cible.png" alt="Hall du centre d'art" />
+
+            <img id="cible_hall_theatre" class="cible" src="images/cible.png" alt="Hall du théâtre" />
+
+            <img id="cible_salle_theatre" class="cible" src="images/cible.png" alt="Salle de théâtre" />
+
+            <img id="cible_caravanserail" class="cible" src="images/cible.png" alt="Caravansérail" />
+
+            <span id="nom_lieu" class="fondVert main-gauche invisible">Lieu</span>
+
+            <!-- POINTS INFO -->
+
+            <img lieu="theatre" id="info_theatre" class="info" src="images/info.png" alt="Info théâtre" />
+
+            <img lieu="piscine" id="info_piscine" class="info" src="images/info.png" alt="Info piscine" />
+
+            <img lieu="grenier" id="info_grenier" class="info" src="images/info.png" alt="Info Grenier" />
+
+            <img lieu="auvent" id="info_auvent" class="info" src="images/info.png" alt="Info Auvent" />
+
+            <img lieu="mediatheque" id="info_mediatheque" class="info" src="images/info.png" alt="Info Médiathèque" />
+
+            <img lieu="ruches" id="info_ruche" class="info" src="images/info.png" alt="Info Ruche" />
+
+            <img lieu="abreuvoir" id="info_abreuvoir" class="info" src="images/info.png" alt="Info Abreuvoir" />
+
+            <img lieu="ecuries" id="info_ecuries" class="info" src="images/info.png" alt="Info écuries" />
+
+            <img lieu="studio" id="info_studio" class="info" src="images/info.png" alt="Info studio" />
+
+            <img lieu="arriere_scene" id="info_arriere_scene" class="info" src="images/info.png" alt="Info arrière scène" />
+
+            <img lieu="accueil" id="info_accueil" class="info" src="images/info.png" alt="Info accueil" />
+
+            <img lieu="centre_art" id="info_centre_art" class="info" src="images/info.png" alt="Info centre d'art" />
+
+            <img lieu="relais" id="info_relai" class="info" src="images/info.png" alt="Info relai" />
+
+            <img lieu="jardins" id="info_jardin" class="info" src="images/info.png" alt="Info jardin" />
+
+            <img lieu="caravanserail" id="info_caravanserail" class="info" src="images/info.png" alt="Info Caravansérail" />
+
+            <img lieu="cinema" id="info_cinema" class="info" src="images/info.png" alt="Info Cinéma" />
+
+            <img lieu="halle" id="info_halle" class="info" src="images/info.png" alt="Info halle" />
+
+            <span id="nom_info" class="fondRouge main-gauche typoBlanc invisible">Info</span>
+
+
             <!-- POINTS PHOTOS ARCHIVES -->
-              
-            <img lieu = "theatre" id = "archive_theatre" class = "archive" src = "images/photo_arch.png" alt = "Archives du théâtre" />
-              
-            <img lieu = "piscine" id = "archive_piscine" class = "archive" src = "images/photo_arch.png" alt = "Archives piscine" />
-              
-            <img lieu = "auvent" id = "archive_auvent" class = "archive" src = "images/photo_arch.png" alt = "Archives Auvent"/>
-              
-            <img lieu = "ruches" id = "archive_ruche" class = "archive" src = "images/photo_arch.png" alt = "Archives Ruches"/> 
-              
-            <img lieu = "ecuries" id = "archive_ecuries" class = "archive" src = "images/photo_arch.png" alt = "Archives écuries" /> 
-              
-            <img lieu = "accueil" id = "archive_accueil" class = "archive" src = "images/photo_arch.png" alt = "Archives accueil" /> 
-              
-            <img lieu = "caravanserail" id = "archive_caravanserail" class = "archive" src = "images/photo_arch.png" alt = "Archives caravansérail"/>
-              
-            <img lieu = "cinema" id = "archive_cinema" class = "archive" src = "images/photo_arch.png" alt = "Archives Cinéma" />
-              
-            <img lieu = "halle" id = "archive_halle" class = "archive" src = "images/photo_arch.png" alt = "Archives Halle"/>
-              
-            <span id = "nom_archive" class = "fondNoir main-gauche typoBlanc invisible">Archives</span>  
-              
+
+            <img lieu="theatre" id="archive_theatre" class="archive" src="images/photo_arch.png" alt="Archives du théâtre" />
+
+            <img lieu="piscine" id="archive_piscine" class="archive" src="images/photo_arch.png" alt="Archives piscine" />
+
+            <img lieu="ruches" id="archive_ruche" class="archive" src="images/photo_arch.png" alt="Archives Ruches" />
+
+            <img lieu="ecuries" id="archive_ecuries" class="archive" src="images/photo_arch.png" alt="Archives écuries" />
+
+            <img lieu="accueil" id="archive_accueil" class="archive" src="images/photo_arch.png" alt="Archives accueil" />
+
+            <img lieu="caravanserail" id="archive_caravanserail" class="archive" src="images/photo_arch.png" alt="Archives caravansérail" />
+
+            <img lieu="cinema" id="archive_cinema" class="archive" src="images/photo_arch.png" alt="Archives Cinéma" />
+
+            <img lieu="halle" id="archive_halle" class="archive" src="images/photo_arch.png" alt="Archives Halle" />
+
+            <span id="nom_archive" class="fondNoir main-gauche typoBlanc invisible">Archives</span>
+
             <!-- CARTE  -->
-            <img id = "carte" src = "images/plan_1140.png" alt = "carte" usemap = "#Map"/>
+            <img id="carte" src="images/plan_1140.png" alt="carte" usemap="#Map" />
             <map name="Map">
                 <area id="theatre" target="" alt="" title="" href="" coords="355,319,543,421" shape="rect">
             </map>
-          </div>
-      </div>
-      
-        <div id = "filter" class = "visible"> </div>
-      
-      <!-- Popup de bienvenue -->
-      
-      <div id = "popupInit" class = "visible fondBlanc"> 
-          <div>
-              <p>Cliquez sur une pastille pour commencer&nbsp!</p>
-              <div id="div_ex_cible">
-                  <img src="images/cible.png" id="ex_cible" class="pastille_ex"/>
-              </div>
-              <div id="div_ex_info">
-                  <img src="images/info.png" id="ex_info" class="pastille_ex"/>
-              </div>
-              <div id="div_ex_photo_arch">
-                  <img src="images/photo_arch.png" id="ex_photo_arch" class="pastille_ex"/>
-              </div>
-          </div>
-          <div id = "cPopupInit" class = " fondVert typoBlanc">Fermer</div>
-      </div>
-      
-      <!-- Liste des lieux à visiter -->
-    
-       <!-- Popup 360 -->
-      <div id = "visite" class = "invisible"> 
-          
-          <!-- Partie 360 et images d'archives -->
-          <div id = "p360" class = "fondRouge">
-              
-             <!-- Visite 360 -->
-              <iframe src = "app/index1.html" border = "none">
-                  
-              </iframe>
-            <!-- Slides avec photos d'archive-->
-               
-               
-            
-
-              
-              
-             <!-- <img id = "info" class = "absCentered" src = "img/icons/information2.png" alt = "info"/>-->
-              <p id = "pFermer" class = "fondRouge typoBlanc main-gauche"> Quitter la visite</p>
-          </div>
-            
-          <!-- Partie texte -->
-         
-          
-      </div>
-      <div id="carrousel" class="invisible">
-        <ul>
-          <li class="visible"><img src="images/photos/theatre2.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-          <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
-        </ul>
-        <div class="controls"> 
-          <span class="prev invisible"><</span> 
-          <span class="next">></span> 
         </div>
-        <div class="fermer visible">X</div>
-      </div>
-     <div  id = "pTexte" class = "fondBlanc">
-              <div id = "fermerTexte" class = "main-gauche typoBlanc fondRouge">X</div>
-              <div id = "pDescriptif">
-                <h2 class = "fondNoir typoBlanc main-gauche" id = "titre"></h2>
-                <div id = "textContainer">
-                    <p class = "bau" id = "sous_titre"></p>
+    </div>
 
-                    <p class = "bau" id = "text"></p>
-                </div>
-              </div>
-          </div>
-      
-      
-  </body>
+    <div id="filter" class="visible"> </div>
+
+    <!-- Popup de bienvenue -->
+
+    <div id="popupInit" class="visible fondBlanc">
+        <div>
+            <p>Cliquez sur une pastille pour commencer&nbsp!</p>
+            <div id="div_ex_cible">
+                <img src="images/cible.png" id="ex_cible" class="pastille_ex" />
+            </div>
+            <div id="div_ex_info">
+                <img src="images/info.png" id="ex_info" class="pastille_ex" />
+            </div>
+            <div id="div_ex_photo_arch">
+                <img src="images/photo_arch.png" id="ex_photo_arch" class="pastille_ex" />
+            </div>
+        </div>
+        <div id="cPopupInit" class=" fondVert typoBlanc">Fermer</div>
+    </div>
+
+    <!-- Liste des lieux à visiter -->
+
+    <!-- Popup 360 -->
+    <div id="visite" class="invisible">
+
+        <!-- Partie 360 et images d'archives -->
+        <div id="p360" class="fondRouge">
+
+            <!-- Visite 360 -->
+            <iframe src="app/index1.html" border="none">
+
+            </iframe>
+            <!-- Slides avec photos d'archive-->
+
+            
+            <!-- <img id = "info" class = "absCentered" src = "img/icons/information2.png" alt = "info"/>-->
+            <p id="pFermer" class="fondRouge typoBlanc main-gauche"> Quitter la visite</p>
+        </div>
+
+        <!-- Partie texte -->
+
+
+    </div>
+    <div id="carrousel" class="invisible">
+        <ul>
+            <div class="fermer visible">X</div>
+            <li class="visible"><img src="images/photos/theatre2.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <li class="visible"><img src="images/photos/theatre1.jpg" class="image" /></li>
+            <div class="controls">
+                <span class="prev invisible"> < </span> <span class="next visible"> > </span>
+            </div>
+        </ul>
+
+    </div>
+    <div id="pTexte" class="fondBlanc">
+        <div id="fermerTexte" class="main-gauche typoBlanc fondRouge">X</div>
+        <div id="pDescriptif">
+            <h2 class="fondNoir typoBlanc main-gauche" id="titre"></h2>
+            <div id="textContainer">
+                <p class="bau" id="sous_titre"></p>
+
+                <p class="bau" id="text"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
 
 <!-- SLICK CAROUSEL -->
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
- <script src="./js/bbcode_trad.js" type="text/javascript"></script>
- <script type="text/javascript" src="./js/pop_up.js" ></script>
-<script src="./js/display.js" type="text/javascript" charset="utf-8"></script>   
-    
-    
+<script src="./js/bbcode_trad.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/pop_up.js"></script>
+<script src="./js/display.js" type="text/javascript" charset="utf-8"></script>
+
+
 </html>
