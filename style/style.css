@@ -142,7 +142,7 @@ h1 span{
     margin: 20px 0;
 }
 
-.cible{
+.cible, .info, .archive{
     display : block;
     position : absolute;
     max-width : 25px;
@@ -150,19 +150,15 @@ h1 span{
     transform: translate(-50%, -50%);
 }
 
-.cible:hover{
+.cible:hover, .info:hover, .archive:hover{
     max-width : 30px;
     max-height : 30px; 
     cursor : pointer;
     -webkit-filter: opacity(0.5) drop-shadow(0 0 0 red);
     filter: opacity(0.5) drop-shadow(0 0 0 red);
-    /*
-    filter: hue-rotate(180deg);
-    -webkit-filter: hue-rotate(180deg);
-    */
 }
 
-.cible:hover~#nom_lieu{
+.cible:hover~#nom_lieu, .info:hover~#nom_info, .archive:hover~#nom_archive{
    display : block;
 }
 
@@ -171,6 +167,7 @@ h1 span{
 #carte{
     width : 100%;
 }
+
 
 #cible_ac_theatre{
     top : 75%;
@@ -198,24 +195,24 @@ h1 span{
 }
 
 #cible_ruches{
-    left : 65%;
+    left : 63.5%;
     top : 40%;    
 }
 
 #cible_centre_art{
+    top : 82%;
     left : 24%;
-    top : 80%;
 }
 
 
 #cible_centre_art_expo{
-    left : 19%;
+    left : 15%;
     top : 80%;
 }
 
 #cible_centre_art_expo2{
     left : 19%;
-    top : 85%;
+    top : 86%;
 }
 
 #cible_hall_theatre{
@@ -228,8 +225,101 @@ h1 span{
     top : 37%
 }
 
+#cible_caravanserail{
+    top : 32%;
+    left : 34%;
+}
+/*POINTS INFO*/
 
-#nom_lieu{
+
+#info_theatre{
+    top : 65%;
+    left : 52%;
+}
+
+#info_piscine{
+    top : 91%;
+    left : 70.5%;
+}
+
+#info_grenier{
+    top : 84%;
+    left : 80%;
+}
+
+#info_auvent{
+    top : 77%;
+    left : 75%;
+}
+
+#info_mediatheque{
+    top : 54%;
+    left : 80%;
+}
+
+#info_ruche{
+    top : 40%;
+    left : 68.5%;
+}
+
+#info_abreuvoir{
+    top : 11%;
+    left : 80%;
+}
+
+#info_ecuries{
+    top : 8%;
+    left : 65%;
+}
+
+#info_studio{
+    top : 14%;
+    left : 50%;
+}
+
+#info_arriere_scene{
+    top : 30%;
+    left : 50%;
+}
+
+#info_accueil{
+    top : 89%;
+    left : 36.3%;
+}
+
+#info_centre_art{
+    top : 78%;
+    left : 24%;
+}
+
+#info_relai{
+    top : 64%;
+    left : 24%;
+}
+
+#info_jardin{
+    top : 51%;
+    left : 74%;
+}
+
+#info_caravanserail{
+    top : 32%;
+    left : 36.5%;
+}
+
+#info_cinema{
+    top : 45.5%;
+    left : 24%;
+}
+
+#info_halle{
+    top : 28%;
+    left : 74%;
+}
+
+/*ARCHIVES*/
+
+#nom_lieu, #nom_info, #nom_archive{
     display : none;
     top : 0;
     left : 0;
@@ -240,6 +330,53 @@ h1 span{
 }
 
 /* INTERFACE 360 */
+
+
+#archive_theatre{
+    top : 68.5%;
+    left : 52%;
+}
+
+#archive_piscine{
+    top : 91%;
+    left : 73%;
+}
+
+#archive_auvent{
+    top : 73.5%;
+    left : 75%;
+}
+
+#archive_ruche{
+   left : 66%;
+    top : 40%;    
+}
+
+#archive_ecuries{
+   top : 8%;
+left : 67.5%;   
+}
+
+#archive_accueil{
+    top : 89%;
+    left : 33.7%;
+}  
+
+#archive_caravanserail{
+    top : 32%;
+    left : 31.5%;
+}
+
+#archive_cinema{
+    top : 41.5%;
+    left : 24%;
+}
+
+#archive_halle{
+    top : 24.5%;
+    left : 74%;
+}
+
 
 /*Global*/
 
@@ -340,10 +477,6 @@ h1 span{
 }
 
 /*Partie texte*/
-
-#info{
-    
-}
 
 #fermerTexte{
     position : absolute;

@@ -16,7 +16,15 @@ $(document).ready(function(){
     
         //Afficher le nom d'un lieu
         $(".cible").hover(function(){
-            afficherLieu(this.id);
+            afficherLieu("#nom_lieu",this.id);
+        });
+    
+        $(".info").hover(function(){
+            afficherLieu("#nom_info",this.id);
+        });
+    
+        $(".archive").hover(function(){
+            afficherLieu("#nom_archive",this.id);
         });
         
         //Ouverture popup 360
@@ -77,19 +85,19 @@ $(document).ready(function(){
                 $("#pTexte").removeClass("invisible").addClass("visible");
         }
     
-        function afficherLieu(id_c){
+        function afficherLieu(id_affiche,id_c){
             var alt = $("#"+id_c).attr("alt");
-            $("#nom_lieu").html(alt);
+            $(id_affiche).html(alt);
             var posTop = $("#"+id_c).css("top");
             var posLeft = $("#"+id_c).css("left");
-            var span_width = $("#nom_lieu").css("width");
+            var span_width = $(id_affiche).css("width");
             
-            $("#nom_lieu").css("top", posTop);
-            $("#nom_lieu").css("left", posLeft);
+            $(id_affiche).css("top", posTop);
+            $(id_affiche).css("left", posLeft);
             
-            $("#nom_lieu").css('top', (parseFloat($("#nom_lieu").css('top')) - 40) + 'px');
-            $("#nom_lieu").css('left', (parseFloat($("#nom_lieu").css('left')))-parseFloat(span_width)/2-5 + 'px');
-            $("#nom_lieu").removeClass("invisible").addClass("visible");
+            $(id_affiche).css('top', (parseFloat($(id_affiche).css('top')) - 40) + 'px');
+            $(id_affiche).css('left', (parseFloat($(id_affiche).css('left')))-parseFloat(span_width)/2-5 + 'px');
+            $(id_affiche).removeClass("invisible").addClass("visible");
         }
        
 });
