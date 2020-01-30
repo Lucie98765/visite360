@@ -381,7 +381,7 @@ left : 67.5%;
 /*Global*/
 
 #visite{
-    width : 1200px;
+    width : 90%;
     height : 700px;
     display : flex;
     position : fixed;
