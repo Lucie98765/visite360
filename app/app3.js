@@ -4,12 +4,11 @@ let spriteActive = false
 
 class Scene{
 
-	constructor(image, points, name){
+	constructor(image, points){
 		this.image = image
 		this.points = []
 		this.sprites = []
 		this.scene = null
-        this.name = name
 	}
 	
 	createScene(scene){
@@ -95,17 +94,17 @@ const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.inner
 
 //CREATING A SPHERE 
 //let s = new Scene('../visite360/360.png', [])
-let ac_theatre = new Scene('photos_360/ac_theatre.png', [], "ac_theatre")
-let hall_theatre = new Scene('photos_360/hall_theatre.png', [], "hall_theatre")
-let scene_theatre = new Scene('photos_360/scene_theatre.jpg', [], "scene_theatre")
-let ruches = new Scene('photos_360/ruches.jpg', [], "ruches")
-let ac_centre_art = new Scene('photos_360/ac_centre_art.png', [], "ac_centre_art")
-let ac_auvent = new Scene('photos_360/ac_auvent.png', [], "ac_auvent")
-let hall_centre_art = new Scene('photos_360/hall_centre_art.jpg', [], "hall_centre_art")
-let salle_expo1 = new Scene('photos_360/salle_expo1.jpg', [], "salle_expo1")
-let salle_expo2 = new Scene('photos_360/salle_expo2.jpg', [], "salle_expo2")
-let hall_cinema = new Scene('photos_360/hall_cinema.png', [], "hall_cinema")
-let salon_bonus = new Scene('photos_360/salon_bonus.jpg', [], "salon_bonus")
+let ac_theatre = new Scene('photos_360/ac_theatre.png', [])
+let hall_theatre = new Scene('photos_360/hall_theatre.png', [])
+let scene_theatre = new Scene('photos_360/scene_theatre.jpg', [])
+let ruches = new Scene('photos_360/ruches.jpg', [])
+let ac_centre_art = new Scene('photos_360/ac_centre_art.png', [])
+let ac_auvent = new Scene('photos_360/ac_auvent.png', [])
+let hall_centre_art = new Scene('photos_360/hall_centre_art.jpg', [])
+let salle_expo1 = new Scene('photos_360/salle_expo1.jpg', [])
+let salle_expo2 = new Scene('photos_360/salle_expo2.jpg', [])
+let hall_cinema = new Scene('photos_360/hall_cinema.png', [])
+let salon_bonus = new Scene('photos_360/salon_bonus.jpg', [])
 let caravanserail = new Scene('photos_360/caravanserail.jpg', [], "caravanserail")
 
 //allee centrale theatre 
@@ -218,6 +217,7 @@ hall_centre_art.addPoint({
 	scene: salle_expo1
 })
 
+
 //Expo 1 
 
 salle_expo1.addPoint({
@@ -269,21 +269,27 @@ caravanserail.addPoint({
 	scene: ac_centre_art
 })
 
-ac_theatre.createScene(scene)
+ac_auvent.createScene(scene)
 
 // RENDERER
 const renderer = new THREE.WebGLRenderer();
+//const renderer = new THREE.WebGLRenderer( { alpha: true } );
+
+
 
 renderer.setSize( window.innerWidth, window.innerHeight ); //aspect ratio renderer
 container.appendChild( renderer.domElement ); //add the renderer to the html 
+
 
 function onResize(){
 	renderer.setSize(window.innerWidth, innerHeight)
 	camera.aspect = window.innerWidth / window.innerHeight
 	camera.updateProjectionMatrix()
+	
 }
 
 const rayCaster = new THREE.Raycaster()
+
 
 //CAMERA CONTROLS
 
