@@ -47,7 +47,7 @@ $(document.body).on('click','#color_button',function(){
 			if(request.status == 200)
 			{
 				var response = JSON.parse(request.responseText);
-				alert(response);
+				alert("Changement enregistré!");
 				window.location.reload();
 			}
 		}
