@@ -2,22 +2,22 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:8889
--- Généré le :  Dim 26 jan. 2020 à 16:41
--- Version du serveur :  5.7.26
--- Version de PHP :  7.3.8
+-- Host: localhost:8889
+-- Generation Time: Jan 30, 2020 at 09:35 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Base de données :  `visite_360`
+-- Database: `visite_360`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Couleur`
+-- Table structure for table `Couleur`
 --
 
 CREATE TABLE `Couleur` (
@@ -26,7 +26,7 @@ CREATE TABLE `Couleur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `Couleur`
+-- Dumping data for table `Couleur`
 --
 
 INSERT INTO `Couleur` (`id_couleur`, `couleur`) VALUES
@@ -35,41 +35,42 @@ INSERT INTO `Couleur` (`id_couleur`, `couleur`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Onglet`
+-- Table structure for table `Onglet`
 --
 
 CREATE TABLE `Onglet` (
   `id_onglet` int(11) NOT NULL,
-  `nom_onglet` varchar(15) NOT NULL
+  `nom_onglet` varchar(30) NOT NULL,
+  `titre_onglet` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `Onglet`
+-- Dumping data for table `Onglet`
 --
 
-INSERT INTO `Onglet` (`id_onglet`, `nom_onglet`) VALUES
-(1, 'theatre'),
-(2, 'piscine'),
-(3, 'grenier'),
-(4, 'auvent'),
-(5, 'mediatheque'),
-(6, 'ruche'),
-(7, 'halle'),
-(8, 'abreuvoir'),
-(9, 'ecuries'),
-(10, 'studio'),
-(11, 'arriere_sc'),
-(12, 'accueil'),
-(13, 'centre_art'),
-(14, 'relais'),
-(15, 'jardins'),
-(16, 'caravanserail'),
-(17, 'cinema');
+INSERT INTO `Onglet` (`id_onglet`, `nom_onglet`, `titre_onglet`) VALUES
+(1, 'theatre', 'Théâtre'),
+(2, 'piscine', 'Piscine'),
+(3, 'grenier', 'Grenier'),
+(4, 'auvent', 'Auvent'),
+(5, 'mediatheque', 'Médiathèque'),
+(6, 'ruches', 'Ruches'),
+(7, 'halle', 'Halle'),
+(8, 'abreuvoir', 'Abreuvoir'),
+(9, 'ecuries', 'Écuries'),
+(10, 'studio', 'Studio'),
+(11, 'arriere_scene', 'Arrière-Scène'),
+(12, 'accueil', 'Accueil'),
+(13, 'centre_art', 'Centre d\'art'),
+(14, 'relais', 'Relais'),
+(15, 'jardins', 'Jardins'),
+(16, 'caravanserail', 'Caravanserail'),
+(17, 'cinema', 'Cinéma');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Page`
+-- Table structure for table `Page`
 --
 
 CREATE TABLE `Page` (
@@ -79,7 +80,7 @@ CREATE TABLE `Page` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `Page`
+-- Dumping data for table `Page`
 --
 
 INSERT INTO `Page` (`id_page`, `titre_page`, `texte_page`) VALUES
@@ -88,7 +89,7 @@ INSERT INTO `Page` (`id_page`, `titre_page`, `texte_page`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Photo`
+-- Table structure for table `Photo`
 --
 
 CREATE TABLE `Photo` (
@@ -98,7 +99,7 @@ CREATE TABLE `Photo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `Photo`
+-- Dumping data for table `Photo`
 --
 
 INSERT INTO `Photo` (`id_photo`, `photo`, `id_onglet`) VALUES
@@ -126,7 +127,7 @@ INSERT INTO `Photo` (`id_photo`, `photo`, `id_onglet`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Sous_titre`
+-- Table structure for table `Sous_titre`
 --
 
 CREATE TABLE `Sous_titre` (
@@ -136,7 +137,7 @@ CREATE TABLE `Sous_titre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `Sous_titre`
+-- Dumping data for table `Sous_titre`
 --
 
 INSERT INTO `Sous_titre` (`id_sous_titre`, `texte_sous_titre`, `id_onglet`) VALUES
@@ -160,7 +161,7 @@ INSERT INTO `Sous_titre` (`id_sous_titre`, `texte_sous_titre`, `id_onglet`) VALU
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Texte`
+-- Table structure for table `Texte`
 --
 
 CREATE TABLE `Texte` (
@@ -170,7 +171,7 @@ CREATE TABLE `Texte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `Texte`
+-- Dumping data for table `Texte`
 --
 
 INSERT INTO `Texte` (`id_texte`, `texte`, `id_onglet`) VALUES
@@ -196,7 +197,7 @@ INSERT INTO `Texte` (`id_texte`, `texte`, `id_onglet`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateur`
+-- Table structure for table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -206,125 +207,125 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `utilisateur`
+-- Dumping data for table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id_user`, `username`, `password`) VALUES
 (1, 'fermedubuisson', '87a4c59294185bd31b66a75339f5f5fd');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `Couleur`
+-- Indexes for table `Couleur`
 --
 ALTER TABLE `Couleur`
   ADD PRIMARY KEY (`id_couleur`);
 
 --
--- Index pour la table `Onglet`
+-- Indexes for table `Onglet`
 --
 ALTER TABLE `Onglet`
   ADD PRIMARY KEY (`id_onglet`);
 
 --
--- Index pour la table `Page`
+-- Indexes for table `Page`
 --
 ALTER TABLE `Page`
   ADD PRIMARY KEY (`id_page`);
 
 --
--- Index pour la table `Photo`
+-- Indexes for table `Photo`
 --
 ALTER TABLE `Photo`
   ADD PRIMARY KEY (`id_photo`),
   ADD KEY `id_onglet` (`id_onglet`);
 
 --
--- Index pour la table `Sous_titre`
+-- Indexes for table `Sous_titre`
 --
 ALTER TABLE `Sous_titre`
   ADD PRIMARY KEY (`id_sous_titre`),
   ADD KEY `id_onglet` (`id_onglet`);
 
 --
--- Index pour la table `Texte`
+-- Indexes for table `Texte`
 --
 ALTER TABLE `Texte`
   ADD PRIMARY KEY (`id_texte`),
   ADD KEY `id_onglet` (`id_onglet`);
 
 --
--- Index pour la table `utilisateur`
+-- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `Couleur`
+-- AUTO_INCREMENT for table `Couleur`
 --
 ALTER TABLE `Couleur`
   MODIFY `id_couleur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `Onglet`
+-- AUTO_INCREMENT for table `Onglet`
 --
 ALTER TABLE `Onglet`
   MODIFY `id_onglet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT pour la table `Page`
+-- AUTO_INCREMENT for table `Page`
 --
 ALTER TABLE `Page`
   MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `Photo`
+-- AUTO_INCREMENT for table `Photo`
 --
 ALTER TABLE `Photo`
   MODIFY `id_photo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT pour la table `Sous_titre`
+-- AUTO_INCREMENT for table `Sous_titre`
 --
 ALTER TABLE `Sous_titre`
   MODIFY `id_sous_titre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT pour la table `Texte`
+-- AUTO_INCREMENT for table `Texte`
 --
 ALTER TABLE `Texte`
   MODIFY `id_texte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT pour la table `utilisateur`
+-- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `Photo`
+-- Constraints for table `Photo`
 --
 ALTER TABLE `Photo`
   ADD CONSTRAINT `photo_ibfk_1` FOREIGN KEY (`id_onglet`) REFERENCES `Onglet` (`id_onglet`);
 
 --
--- Contraintes pour la table `Sous_titre`
+-- Constraints for table `Sous_titre`
 --
 ALTER TABLE `Sous_titre`
   ADD CONSTRAINT `sous_titre_ibfk_1` FOREIGN KEY (`id_onglet`) REFERENCES `Onglet` (`id_onglet`);
 
 --
--- Contraintes pour la table `Texte`
+-- Constraints for table `Texte`
 --
 ALTER TABLE `Texte`
   ADD CONSTRAINT `texte_ibfk_1` FOREIGN KEY (`id_onglet`) REFERENCES `Onglet` (`id_onglet`);

@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "main-gauche";
+	src: url("../fonts/main-gauche.otf");
+}
+
+.invisible{
+	display: none;
+}
+.visible{
+	display: block;
+}
+.next,.prev,.fermer{
+	font: 50px main-gauche;
+	position: relative;
+}
+.image{
+	width : 800px;
+	text-align: center;
+	position: relative;
+}
+.next{
+	/*margin-top: -30%;*/
+	margin-left: 70%;
+}
+.prev{
+	margin-top: -30%;
+}
+.fermer{
+	margin-top: -20%;
+	margin-left: 70%;
+}
+#carrousel{
+	background-color: red;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:;
+}
+
+
+

@@ -97,8 +97,11 @@ $(document).ready(function(){
             e.preventDefault();
             $("#visite").removeClass("invisible").addClass("visible");
             $("#filter").removeClass("invisible").addClass("visible");
-            globalThis.pouet = "prout";
-            console.log(globalThis.pouet);
+        });
+
+        $(".info").click(function(e){
+            e.preventDefault();
+            $("#pTexte").removeClass("invisible").addClass("visible");
         });
         
         $("#pFermer").click(function(){
@@ -108,10 +111,10 @@ $(document).ready(function(){
         });
         
             //De vue 360 à photos historiques
-            $("#photosHistoriques").click(function(){
+            $(".archive").click(function(){
                 $("#photosHistoriques").removeClass("visible").addClass("invisible");
                 $("#retour360").removeClass("invisible").addClass("visible");
-                $("#slide").removeClass("invisible").addClass("visible");
+                $("#carrousel").removeClass("invisible").addClass("visible");
                 $("iframe").removeClass("visible").addClass("invisible");
             });
         
@@ -128,7 +131,7 @@ $(document).ready(function(){
                 removeText();
             });
         
-            $("#info").click(function(){
+            $(".info").click(function(){
                 setText();
             });
 

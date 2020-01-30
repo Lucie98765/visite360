@@ -2,13 +2,6 @@
 // headers
 header("Content-Type: application/json; charset=UTF-8");
 
-session_start();
-if (!isset($_SESSION['id_user'])){
-	echo 'User non connecté';
-	http_response_code(422);
-	exit();
-}
-
 // check HTTP method
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 

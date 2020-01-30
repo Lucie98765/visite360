@@ -506,6 +506,11 @@ left : 67.5%;
 #textContainer p{
     padding : 20px;
 }
+
+#textContainer{
+        overflow-y: auto;
+        height: 500px;
+} 
 /* General */
 
 #filter{

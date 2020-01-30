@@ -95,6 +95,11 @@
         margin-top: -100px;
     }
 
+    #textContainer{
+        overflow-y: auto;
+        height: 300px;
+    }  
+
 }
 
 @media all and (max-width: 499px) {

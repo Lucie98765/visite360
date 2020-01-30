@@ -1,6 +1,16 @@
 "use strict";
 let root = document.documentElement;
 
+Document.prototype.ready = callback => {
+	if(callback && typeof callback === 'function') {
+		document.addEventListener("DOMContentLoaded", () =>  {
+			if(document.readyState === "interactive" || document.readyState === "complete") {
+				return callback();
+			}
+		});
+	}
+};
+
 $(document.body).on('click','h2',function(){
 	this.nextElementSibling.classList.toggle('replier');
 
@@ -93,12 +103,17 @@ document.ready( () => {
 	request.open("POST", "get_couleur.php",true);
 	request.send();
     
+    if(document.getElementById("help_btn")){
+    	var display_help = document.getElementById("help_btn");
+    	display_help.addEventListener("click", help);
+    }
     
-    var display_help = document.getElementById("help_btn");
-    display_help.addEventListener("click", help);
+    if(document.getElementById("close_help_btn")){
+	    var close_help_btn = document.getElementById("close_help_btn");
+	    close_help_btn.addEventListener("click", close_help);    	
+    }
     
-    var close_help_btn = document.getElementById("close_help_btn");
-    close_help_btn.addEventListener("click", close_help);
+
     
 
 });
