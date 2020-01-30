@@ -92,15 +92,8 @@ $(document).ready(function(){
             afficherLieu("#nom_archive",this.id);
         });
         
-        //Ouverture popup 360
-        $("#theatre").click(function(e){
-            e.preventDefault();
-            $("#visite").removeClass("invisible").addClass("visible");
-            $("#filter").removeClass("invisible").addClass("visible");
-            
-        });
         
-        $(".cible").click(function(e){
+        $(".cible, .lieu").click(function(e){
             e.preventDefault();
             $("#visite").removeClass("invisible").addClass("visible");
             $("#filter").removeClass("invisible").addClass("visible");

@@ -296,7 +296,7 @@ const rayCaster = new THREE.Raycaster()
 
 const controls = new THREE.OrbitControls( camera, renderer.domElement );
 camera.position.set( -1, 0, 0 ) //camera centered
-controls.rotateSpeed = 0.2
+controls.rotateSpeed = 0.5
 controls.enableZoom = false
 controls.update()
 
