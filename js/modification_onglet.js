@@ -88,7 +88,7 @@ document.ready(() =>{
 		}
 	}
 	//appel vers requête php de chargement
-	request.open("POST", "get_nom_onglet.php",true);
+	request.open("GET", "get_nom_onglet.php",true);
 	request.send();
 });
 

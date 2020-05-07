@@ -94,7 +94,7 @@ document.ready( () => {
 		}
 	}
 	//appel vers requête php de chargement
-	request.open("POST", "get_couleur.php",true);
+	request.open("GET", "get_couleur.php",true);
 	request.send();
     
     if(document.getElementById("help_btn")){

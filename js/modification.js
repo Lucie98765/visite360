@@ -155,7 +155,7 @@ document.ready( () => {
 			}
 		}
 	}
-	request2.open("POST", "get_onglet.php",true);
+	request2.open("GET", "get_onglet.php",true);
 	request2.send();
 });
 
