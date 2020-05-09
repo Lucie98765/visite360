@@ -13,6 +13,7 @@ document.ready( () => {
 	event.preventDefault();
 	//affiche partie page
 	let nouveau_titre = document.querySelector('#nouveau_titre');
+	nouveau_titre.setAttribute("required","required");
 	let ancien_titre=document.querySelector('#titre');
 	let texte=document.querySelector('#texte');
 	var request = new XMLHttpRequest();
@@ -70,7 +71,8 @@ document.ready( () => {
 					div1.appendChild(div2);
 
 					var sous_titre_contenu = document.createElement("p");
-					sous_titre_contenu.setAttribute("contenteditable","true")
+					sous_titre_contenu.setAttribute("contenteditable","true");
+					sous_titre_contenu.setAttribute("required","required");
 					sous_titre_contenu.innerHTML = response[i]['sous_titre'];
 					sous_titre_contenu.setAttribute("id",response[i]['nom_onglet']+"_sous_titre");
 					div2.appendChild(sous_titre_contenu);
@@ -92,6 +94,7 @@ document.ready( () => {
 
 					var texte_contenu = document.createElement("p");
 					texte_contenu.setAttribute("contenteditable","true");
+					texte_contenu.setAttribute("required","required");
 					texte_contenu.innerHTML = response[i]['texte'];
 					texte_contenu.setAttribute("id",response[i]['nom_onglet']+"_texte");
 					div3.appendChild(texte_contenu);

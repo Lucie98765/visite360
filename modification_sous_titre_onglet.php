@@ -32,7 +32,10 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
-
+	if($json_obj['sous_titre']==='<br>'){
+		echo json_encode('Changement non-enregistré : champ vide');
+		exit();	
+	}
 	$onglet = $json_obj['onglet'];
 	$sous_titre = $json_obj['sous_titre'];
 

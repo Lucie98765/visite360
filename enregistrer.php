@@ -33,6 +33,10 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
+	if($json_obj['nouveau_titre']==='<br>'){
+		echo json_encode('Changement non-enregistré : champ vide');
+		exit();	
+	}
 
 	$nouveau_titre = $json_obj['nouveau_titre'];
 	$ancien_titre = $json_obj['ancien_titre'];

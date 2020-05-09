@@ -349,5 +349,10 @@ animate()
 window.addEventListener('resize', onResize)
 container.addEventListener('click', onClick)
 container.addEventListener('mousemove', onMouseMove )
-
+renderer.domElement.addEventListener('mousedown', ()=>{
+	renderer.domElement.classList.add('grabbing')
+})
+renderer.domElement.addEventListener('mouseup', ()=>{
+	renderer.domElement.classList.remove('grabbing')
+})
 

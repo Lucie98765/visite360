@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_user'])){
 // check HTTP method
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 
-if ($method !== 'post') {
+if ($method !== 'get') {
 	http_response_code(405);
 	echo json_encode(array('message' => 'This method is not allowed.'));
 	exit();

@@ -32,6 +32,10 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
+	if($json_obj['texte']==='<br>'){
+		echo json_encode('Changement non-enregistré : champ vide');
+		exit();	
+	}
 
 	$onglet = $json_obj['onglet'];
 	$texte = $json_obj['texte'];
