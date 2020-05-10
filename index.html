@@ -84,6 +84,7 @@
             </div>
 
             <!-- CIBLES -->
+            <img id = "help_tuto" class = "help" src ="images/help2.png" alt = "Aide" />
 
             <img id="cible_ac_theatre" class="cible" src="images/cible.png" alt="Allée centrale theatre" />
 
@@ -195,9 +196,22 @@
                 <img src="images/photo_arch.png" id="ex_photo_arch" class="pastille_ex" />
             </div>
         </div>
-        <div id="cPopupInit" class=" fondVert typoBlanc">Fermer</div>
+        <div id="cPopupInit" class=" fondVert typoBlanc">Suivant</div>
+    </div>
+    
+    <div id="popupInit2" class="invisible fondBlanc">
+        <div>
+            <p>Vous pouvez à tout moment visualiser le tutoriel de la visite 360 en cliquant sur <span><img src = "images/help2.png"/></span></p>
+        </div>
+         <div id = "cPopupInit3" class="fondVert typoBlanc">Tutoriel</div>
+         <div id = "cPopupInit2" class="fondRouge typoBlanc">Fermer</div>
     </div>
 
+    <div id="tuto" class="visible fondBlanc invisible">
+        <video controls src="images/video/tuto.mov">Tutoriel video visite 360</video>
+        <div id = "cPopupInit4" class="fondRouge typoBlanc">Fermer</div>
+    </div>
+    
     <!-- Liste des lieux à visiter -->
 
     <!-- Popup 360 -->
@@ -218,8 +232,7 @@
         </div>
 
         <!-- Partie texte -->
-
-
+        
     </div>
     <div id="carrousel" class="invisible">
         <ul>

@@ -1,10 +1,7 @@
-var pouet = "pouet";
-
 $(document).ready(function(){
         $("canvas").prependTo("iframe");
         $("canvas").addClass("visible");
-        //$("canvas").addClass("invisible");
-        //enlève
+    
         $("#pTexte").removeClass("visible").addClass("invisible");
         $("#p360").css("position","absolute");
         
@@ -75,8 +72,25 @@ $(document).ready(function(){
     
         //Fermeture popup initial
         $("#cPopupInit").click(function(){
-            $("#popupInit").removeClass("visible").addClass("invisible"); 
+            $("#popupInit").removeClass("visible").addClass("invisible");             $("#popupInit2").removeClass("invisible").addClass("visible"); 
+           
+        });
+    
+        $("#cPopupInit2").click(function(){
+            $("#popupInit2").removeClass("visible").addClass("invisible"); 
             $("#filter").removeClass("visible").addClass("invisible"); 
+        });
+    
+        $("#help_tuto").click(function(){
+            $("#tuto").removeClass("invisible").addClass("visible");  
+        });
+    
+        $("#cPopupInit3").click(function(){
+            $("#tuto").removeClass("invisible").addClass("visible");  
+        });
+    
+        $("#cPopupInit4").click(function(){
+            $("#tuto").removeClass("visible").addClass("invisible");  
         });
     
         //Afficher le nom d'un lieu
