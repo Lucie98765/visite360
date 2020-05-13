@@ -44,15 +44,15 @@ else{
 	$stmt = $bdd->prepare(<<<SQL
 		UPDATE Page
 		SET titre_page = :nouveau_titre
-		WHERE titre_page = :ancien_titre
+		WHERE id_page = 1
 SQL);
 
 	//$stmt->bindParam(':nouveau_titre',$nouveau_titre);
 	//$stmt->bindParam(':ancien_titre',$ancien_titre);
-	$stmt->execute(array(':nouveau_titre' => $nouveau_titre,':ancien_titre'=>$ancien_titre));
+	$stmt->execute(array(':nouveau_titre' => $nouveau_titre));
 
 
-	echo json_encode('Changement enregistré');
+	echo json_encode('Changment enregistré');
 }
 
 
