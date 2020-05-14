@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style/style_log.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <title>Log page</title>
   </head>
   <body id ="login_page">
