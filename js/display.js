@@ -107,7 +107,25 @@ document.ready( () => {
 	    close_help_btn.addEventListener("click", close_help);    	
     }
     
+    var request2 = new XMLHttpRequest();
 
+    	request2.onreadystatechange = () => {
+		if(request.readyState == 4) {
+			if(request.status == 200)
+			{
+				var response = JSON.parse(request2.responseText);
+				document.getElementById("titre_page").innerHTML = response[0][1].replace('<br>','');
+				var st = response[0][2].replace('<br>','');
+				JSON.stringify(st);
+				var html = bbcodeParser.bbcodeToHtml(st);
+				document.getElementById("description").innerHTML = html;
+			}
+		
+		}
+	}
+	//appel vers requête php de chargement
+	request2.open("GET", "get_info_page.php",true);
+	request2.send();
     
 
 });
