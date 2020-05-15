@@ -2,6 +2,16 @@
     .container{
         width : 95%;
     }
+    
+    #tuto{
+        width : 100%;
+    }
+    
+    #help_tuto{
+        top : 80px;
+        left : 25px;
+    }
+    
     .interface {
         width: 100%;
     }
@@ -54,7 +64,7 @@
         margin-top: -70px;
     }
     
-    #popupInit{
+    #popupInit, #popupInit2{
         font-size : 25px;
         width : 300px;
         height : 180px;
