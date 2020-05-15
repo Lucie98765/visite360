@@ -16,6 +16,7 @@
     background-color: #E10F21;
     color: white;
     padding: 2px;
+    cursor: default;
 }
 .next:hover,.prev:hover,.fermer:hover{
     background-color: white;
