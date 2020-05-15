@@ -62,7 +62,7 @@ h1 span{
     left : 50%;
     transform: translate(-50%, -50%);
     width : 400px;
-    height: 200px;
+    height: auto;
     text-align : center;
     font-size : 35px ;
     font-family : main-gauche;
@@ -86,7 +86,7 @@ h1 span{
 }
 
 #popupInit img{
-    margin: 15px 15px 25px 15px;
+    margin: 15px 15px 10px 15px; 
 }
 
 #popupInit2 img{
@@ -96,38 +96,23 @@ h1 span{
 .pastille_ex{
     width: 40px;
     height: 40px;
-    cursor: pointer;
 }
 
-#div_ex_cible, #div_ex_info, #div_ex_photo_arch{
-    position: relative;
-}
+#popupInit #div_ex_cible, #popupInit #div_ex_info, #popupInit #div_ex_photo_arch{ 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin: 0 10px; 
+    margin-bottom: 15px; 
+} 
 
-#div_ex_cible:hover::after, #div_ex_info:hover::after, #div_ex_photo_arch:hover::after{
-    display: block;
-}
-
-#div_ex_cible::after, #div_ex_info::after, #div_ex_photo_arch::after{
-    position: absolute;
-    display: none;
-    content: "Vue 360 du point";
+#div_ex_cible p, #div_ex_info p, #div_ex_photo_arch p{ 
     font-family: "bau-regular";
     font-size: 14px;
     color: black;
-    bottom: -10px;
-    left: 0;
     text-align: center;
-    background-color: white;
-}
-
-#div_ex_info::after{
-    content: "Informations liées au point";
-    bottom: -25px;
-}
-
-#div_ex_photo_arch::after{
-    content: "Photos d'archives";
-    bottom: -10px;
 }
 
 #cPopupInit, #cPopupInit2, #cPopupInit3, #cPopupInit4{
