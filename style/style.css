@@ -52,7 +52,11 @@ h1 span{
 
 /* Initial popup */
 
-#popupInit{
+.displayFlex{
+    display : flex;
+}
+
+#popupInit, #popupInit2{
     position : fixed;
     top : 50%;
     left : 50%;
@@ -67,8 +71,8 @@ h1 span{
     flex-wrap: wrap;
 }
 
-#popupInit p {
-    padding : 15px;
+#popupInit p, #popupInit2 p{
+    padding : 5px;
     margin : 5px auto;
     width: 90%;
     padding-bottom: 0;
@@ -82,7 +86,11 @@ h1 span{
 }
 
 #popupInit img{
-    margin: 15px 15px 10px 15px;
+    margin: 15px 15px 10px 15px; 
+}
+
+#popupInit2 img{
+    width : 30px;
 }
 
 .pastille_ex{
@@ -108,11 +116,28 @@ h1 span{
     text-align: center;
 }
 
-#cPopupInit{
+#cPopupInit, #cPopupInit2, #cPopupInit3, #cPopupInit4{
     width: 100%;
     padding-top: 7px;
 }
 
+/* Video tutoriel */
+
+#tuto{
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    width : 800px;
+    height: auto;
+    text-align : center;
+    font-size : 35px ;
+    font-family : main-gauche;
+}
+
+video{
+    width : 100%;
+}
 
 /* MAP */
 
@@ -129,7 +154,7 @@ h1 span{
     margin: 20px 0;
 }
 
-.cible, .info, .archive{
+.cible, .info, .archive, .help{
     display : block;
     position : absolute;
     max-width : 25px;
@@ -137,7 +162,7 @@ h1 span{
     transform: translate(-50%, -50%);
 }
 
-.cible:hover, .info:hover, .archive:hover{
+.cible:hover, .info:hover, .archive:hover, .help:hover{
     max-width : 30px;
     max-height : 30px; 
     cursor : pointer;
@@ -145,7 +170,7 @@ h1 span{
     filter: opacity(0.5) drop-shadow(0 0 0 red);
 }
 
-.cible:hover~#nom_lieu, .info:hover~#nom_info, .archive:hover~#nom_archive{
+.cible:hover~#nom_lieu, .info:hover~#nom_info, .archive:hover~#nom_archive, .help:hover{
    display : block;
 }
 
@@ -155,6 +180,14 @@ h1 span{
     width : 100%;
 }
 
+#help_tuto{
+    top : 5%;
+    left : 95%;
+}
+
+#help_tuto img{
+    width : 50px;
+}
 
 #cible_ac_theatre{
     top : 75%;
@@ -412,7 +445,7 @@ left : 67.5%;
     cursor : pointer;
 }
 
-#cPopupInit:hover{
+#cPopupInit:hover, #cPopupInit3:hover, #cPopupInit2:hover, #cPopupInit4:hover{
     color : var(--couleur_ferme);
     background-color : white;
     cursor : pointer;

@@ -6,8 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/style.css" >
+    <link rel="stylesheet" href="style/responsive.css" >
     <link rel="stylesheet" href="style/screen.css" />
     <link rel="stylesheet" href="style/diapo_style.css" />
     <link rel="icon" type="image/png" href="images/logo.png" />
@@ -28,8 +28,6 @@
         <div class="section-text">
             <p id="description"></p>
         </div>
-
-
 
         <div class="interface">
 
@@ -82,6 +80,7 @@
             </div>
 
             <!-- CIBLES -->
+            <img id = "help_tuto" class = "help" src ="images/help2.png" alt = "Aide" />
 
             <img id="cible_ac_theatre" class="cible" src="images/cible.png" alt="Allée centrale theatre" />
 
@@ -182,7 +181,7 @@
 
     <div id="popupInit" class="visible fondBlanc">
         <div>
-            <p>Une fois sur la carte, cliquez sur une pastille pour commencer la visite&nbsp!</p>
+            <p>Une fois sur la carte, cliquez sur une pastille pour commencer la visite&nbsp!</p> 
             <div id="div_ex_cible">
                 <img src="images/cible.png" id="ex_cible" class="pastille_ex" />
                 <p>Vue 360 du point</p>
@@ -196,9 +195,22 @@
                 <p>Photos d'archives du lieu</p>
             </div>
         </div>
-        <div id="cPopupInit" class=" fondVert typoBlanc">Fermer</div>
+        <div id="cPopupInit" class=" fondVert typoBlanc">Suivant</div>
+    </div>
+    
+    <div id="popupInit2" class="invisible fondBlanc">
+        <div>
+            <p>Vous pouvez à tout moment visualiser le tutoriel de la visite 360 en cliquant sur <span><img src = "images/help2.png"/></span></p>
+        </div>
+         <div id = "cPopupInit3" class="fondVert typoBlanc">Tutoriel</div>
+         <div id = "cPopupInit2" class="fondRouge typoBlanc">Fermer</div>
     </div>
 
+    <div id="tuto" class="visible fondBlanc invisible">
+        <video controls src="images/video/tuto.mp4">Tutoriel video visite 360</video>
+        <div id = "cPopupInit4" class="fondRouge typoBlanc">Fermer</div>
+    </div>
+    
     <!-- Liste des lieux à visiter -->
 
     <!-- Popup 360 -->
@@ -219,8 +231,7 @@
         </div>
 
         <!-- Partie texte -->
-
-
+        
     </div>
     <div id="carrousel" class="invisible">
         <ul>

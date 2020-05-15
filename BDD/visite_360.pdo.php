@@ -3,7 +3,7 @@
 	try
 	{
 		// On se connecte à MySQL
-		$bdd = new PDO('mysql:host=localhost;dbname=visite_360;charset=utf8', 'root', 'root');
+		$bdd = new PDO('mysql:host=localhost;dbname=visite_360;charset=utf8', 'root', '');
 	}
 	catch(Exception $e)
 	{
