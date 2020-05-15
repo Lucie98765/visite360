@@ -13,7 +13,7 @@ document.getElementById("submit").onclick = event =>{
 			if(request.status == 200){
 				Array.prototype = true;
 				var response = JSON.parse(request.responseText);
-				document.location.href="admin.php";
+				document.location.href="../php/admin.php";
 			}
 			else{
 				var error = document.querySelector('#error');
@@ -23,6 +23,6 @@ document.getElementById("submit").onclick = event =>{
 		}
 	}
 
-	request.open("POST", "connexion.php",true);
+	request.open("POST", "../php/connexion.php",true);
     request.send(body);
 };

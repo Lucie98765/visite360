@@ -30,7 +30,7 @@ document.ready( () => {
 		}
 	}
 	//appel vers requête php de chargement
-	request.open("POST", "chargement.php",true);
+	request.open("POST", "../php/chargement.php",true);
 	request.send();
 
 	//affiche partie onglet
@@ -52,7 +52,7 @@ document.ready( () => {
 					titre_onglet.appendChild(span);
 
 					var fleche = document.createElement("img");
-					fleche.setAttribute("src","images/fleche.png");
+					fleche.setAttribute("src","../images/fleche.png");
 					fleche.classList.add("fleche");
 					titre_onglet.appendChild(fleche);
 					content.appendChild(titre_onglet);
@@ -104,61 +104,11 @@ document.ready( () => {
 					button_texte.innerHTML = "Enregistrer";
 					button_texte.setAttribute("id",response[i]['nom_onglet']+"_button_texte");
 					div3.appendChild(button_texte);
-					
-					/*if(response[i]['photo']=== undefined){
-						console.log('undifined');
-					}
-					else{
-						var photo_titre = document.createElement("h3");
-						photo_titre.innerHTML = "Photos historiques";
-						div1.appendChild(photo_titre);
-
-						var div4 = document.createElement("div");
-						div4.classList.add("modif");
-						div1.appendChild(div4);
-
-						var div5 = document.createElement("div");
-						div5.setAttribute("class","photos");
-						div4.appendChild(div5);
-
-						for (var j = 0; j < Object.keys(response[i]['photo']).length; j++) {
-							var img = document.createElement("img");
-							img.setAttribute("src","images/photos/"+response[i]['photo'][j]);
-							div5.appendChild(img);	
-							var input = document.createElement("input");
-							input.setAttribute("type","checkbox");
-							input.setAttribute("id",titre_onglet + j);
-							input.setAttribute("name",titre_onglet + j);
-							div5.appendChild(input);
-						}
-
-						var div6 = document.createElement("div");
-						div6.setAttribute("id","div_boutons");
-						div4.appendChild(div6);
-
-                        var button_supp = document.createElement("button");
-                        button_supp.setAttribute("type","button");
-                        button_supp.setAttribute("id",response[i]['nom_onglet']+"_button_photo_supp");
-                        button_supp.innerHTML =  "Supprimer les photos sélectionnées";
-                        div6.appendChild(button_supp); 
-
-                        var button_ajout = document.createElement("button");
-                        button_ajout.setAttribute("type","button");
-                        button_ajout.setAttribute("id",response[i]['nom_onglet']+"_button_photo_ajout");
-                        button_ajout.innerHTML =  "Ajouter une photo";
-                        div6.appendChild(button_ajout);
-
-                        var button_modif_photo = document.createElement("button");
-                        button_modif_photo.setAttribute("type","button");
-                        button_modif_photo.setAttribute("id",response[i]['nom_onglet']+"_button_modif_photo");
-                        button_modif_photo.innerHTML =  "Enregistrer";
-                        div6.appendChild(button_modif_photo);*/
-					//}
 				}			
 			}
 		}
 	}
-	request2.open("GET", "get_onglet.php",true);
+	request2.open("GET", "../php/get_onglet.php",true);
 	request2.send();
 });
 
@@ -187,7 +137,7 @@ document.getElementById("submit_modification_titre").onclick = event => {
 		}
 	}
 	//appel vers requête php d'insertion
-	request.open("POST", "enregistrer.php",true);
+	request.open("POST", "../php/enregistrer.php",true);
 	request.send(body);
 };
 //modification onglet texte
@@ -214,7 +164,7 @@ document.getElementById("submit_modification_texte").onclick = event => {
 		}
 	}
 	//appel vers requête php d'insertion
-	request.open("POST", "enregistrer_texte.php",true);
+	request.open("POST", "../php/enregistrer_texte.php",true);
 	request.send(body);
 
 };

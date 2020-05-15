@@ -1,7 +1,6 @@
 <?php
 // headers
 header("Content-Type: application/text; charset=UTF-8");
-
 session_start();
 if (!isset($_SESSION['id_user'])){
 	echo 'User non connecté';
@@ -18,7 +17,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -33,26 +32,24 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
-	if($json_obj['nouveau_titre']==='<br>'){
+	if($json_obj['sous_titre']==='<br>'){
 		echo json_encode('Changement non-enregistré : champ vide');
 		exit();	
 	}
-
-	$nouveau_titre = $json_obj['nouveau_titre'];
-	$ancien_titre = $json_obj['ancien_titre'];
+	$onglet = $json_obj['onglet'];
+	$sous_titre = $json_obj['sous_titre'];
 
 	$stmt = $bdd->prepare(<<<SQL
-		UPDATE Page
-		SET titre_page = :nouveau_titre
-		WHERE id_page = 1
-SQL);
+		UPDATE Sous_titre
+		SET texte_sous_titre = :sous_titre
+		WHERE id_onglet = (SELECT id_onglet FROM Onglet WHERE nom_onglet = :onglet)
+SQL
+                         );
 
-	//$stmt->bindParam(':nouveau_titre',$nouveau_titre);
-	//$stmt->bindParam(':ancien_titre',$ancien_titre);
-	$stmt->execute(array(':nouveau_titre' => $nouveau_titre));
+	$stmt->execute(array(':sous_titre' => $sous_titre,':onglet'=>$onglet));
 
 
-	echo json_encode('Changment enregistré');
+	echo json_encode('Changement enregistré');
 }
 
 

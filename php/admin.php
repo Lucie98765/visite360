@@ -14,21 +14,21 @@ if (!isset($_SESSION['id_user'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" type="text/css" href="style/acces_admin.css">
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" type="text/css" href="../style/acces_admin.css">
     <title>Accès administrateur</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="images/logo_troue.png" alt="logo pour retourner à l'accueil" /></a>
-        <a href="logout.php" id="bouton_deco"><img src="images/deco.png" alt="bouton pour se déconnecter" /></a>
+        <a href="https://www.lafermedubuisson.com" id="logo_gauche"><img src="../images/logo_troue.png" alt="logo pour retourner à l'accueil" /></a>
+        <a href="logout.php" id="bouton_deco"><img src="../images/deco.png" alt="bouton pour se déconnecter" /></a>
         <h1><span class="points">······&nbsp</span>Interface administrateur<span class="points">&nbsp······</span></h1>
     </header>
     <main>
-        <img src="images/help.png" alt="bouton d'aide" id="help_btn" />
+        <img src="../images/help.png" alt="bouton d'aide" id="help_btn" />
         <div id="aide" class="hide">
-            <h2>Aide <img src="images/close_help.png" alt="bouton permettant de fermer la fenêtre d'aide" id="close_help_btn"/></h2>
+            <h2>Aide <img src="../images/close_help.png" alt="bouton permettant de fermer la fenêtre d'aide" id="close_help_btn"/></h2>
             <ul>
                 <li>
                     <p>Pour intégrer un lien : [url={votre lien}]{texte cliquable}[/url] </p>
@@ -65,7 +65,7 @@ if (!isset($_SESSION['id_user'])){
             <p id="color_error"></p>
         </div>
         <div id="accordeon">
-                <h2>Page : <span id="titre">Visite 360</span><img src="images/fleche.png" class="fleche"/></h2>
+                <h2>Page : <span id="titre">Visite 360</span><img src="../images/fleche.png" class="fleche"/></h2>
                 <div class="onglet replier">
                     <h3>Titre</h3>
                     <div class="modif">
@@ -86,8 +86,8 @@ if (!isset($_SESSION['id_user'])){
 
     
 </body>
-<script src="js/bbcode_trad.js"></script>
-<script src="js/modification.js"></script>
-<script src="js/modification_onglet.js"></script>
-<script src="js/display.js"></script>
+<script src="../js/bbcode_trad.js"></script>
+<script src="../js/modification.js"></script>
+<script src="../js/modification_onglet.js"></script>
+<script src="../js/display.js"></script>
 </html>

@@ -2,13 +2,13 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style/style_log.css" />
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="../style/style_log.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
     <title>Log page</title>
   </head>
   <body id ="login_page">
   	<div id="contener">
-  		<img src="images/logo_fermedubuisson_blanc.png" id="logo">
+  		<img src="../images/logo_fermedubuisson_blanc.png" id="logo">
   		<span id="description"> Connexion à l'interface admin de la visite 360 </span>
   		<form method="post" id="form">
 		  <div class="form-example">
@@ -23,7 +23,7 @@
 		  </div>
 		</form>
   	</div>
-  	<script src="js/profile.js"></script>
+  	<script src="../js/profile.js"></script>
 
   </body>
 </html>

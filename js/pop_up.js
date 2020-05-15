@@ -40,7 +40,7 @@ $(document.body).on('click','.info',function(){
 		}
 	}  
 	//appel vers requête php de chargement
-	request.open("GET", "get_content_pop_up.php",true);
+	request.open("GET", "../php/get_content_pop_up.php",true);
 	request.send();
 	
 });
@@ -153,7 +153,7 @@ $(document.body).on('click','.archive',function(){
 		}
 	}  
 	//appel vers requête php de chargement
-	request.open("GET", "get_content_pop_up.php",true);
+	request.open("GET", "../php/get_content_pop_up.php",true);
 	request.send();
 	$("#carrousel").removeClass("invisible").addClass("visible");
 	

@@ -9,7 +9,7 @@
 		exit();
 	}
 
-	include_once "BDD/visite_360.pdo.php";
+	include_once "../BDD/visite_360.pdo.php";
 
 	http_response_code(200);
 

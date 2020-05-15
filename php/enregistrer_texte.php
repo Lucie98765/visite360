@@ -17,7 +17,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -32,17 +32,25 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
+	if($json_obj['texte']==='<br>'){
+		echo json_encode('Changement non-enregistré : champ vide');
+		exit();	
+	}
 
-	$ancienne_couleur = $json_obj['ancienne_couleur'];
-	$nouvelle_couleur = $json_obj['nouvelle_couleur'];
+	$titre = $json_obj['titre'];
+	$texte = $json_obj['texte'];
 
 	$stmt = $bdd->prepare(<<<SQL
-		UPDATE Couleur
-		SET couleur = :nouvelle_couleur
-SQL);
+		UPDATE Page
+		SET texte_page = :texte
+		WHERE titre_page = :titre
+SQL
+                         );
 
-	$stmt->execute(array(':nouvelle_couleur' => $nouvelle_couleur));
-	echo json_encode($nouvelle_couleur);
+	$stmt->execute(array(':texte' => $texte,':titre'=>$titre));
+
+
+	echo json_encode('Changement enregistré');
 }
 
 
@@ -50,4 +58,4 @@ SQL);
 
 exit();
 
-?>	
+?>	 

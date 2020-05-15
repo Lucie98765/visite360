@@ -10,7 +10,7 @@ if (!isset($_SESSION['id_user'])){
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
