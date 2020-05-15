@@ -10,6 +10,11 @@
         width : 100%;
     }
     
+    #help_tuto{
+        top : 80px;
+        left : 25px;
+    }
+    
     .interface #carte{
         display: none !important;
     }
