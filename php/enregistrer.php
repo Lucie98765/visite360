@@ -18,7 +18,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -33,6 +33,10 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
+	if($json_obj['nouveau_titre']==='<br>'){
+		echo json_encode('Changement non-enregistré : champ vide');
+		exit();	
+	}
 
 	$nouveau_titre = $json_obj['nouveau_titre'];
 	$ancien_titre = $json_obj['ancien_titre'];
@@ -40,15 +44,16 @@ else{
 	$stmt = $bdd->prepare(<<<SQL
 		UPDATE Page
 		SET titre_page = :nouveau_titre
-		WHERE titre_page = :ancien_titre
-SQL);
+		WHERE id_page = 1
+SQL
+                         );
 
 	//$stmt->bindParam(':nouveau_titre',$nouveau_titre);
 	//$stmt->bindParam(':ancien_titre',$ancien_titre);
-	$stmt->execute(array(':nouveau_titre' => $nouveau_titre,':ancien_titre'=>$ancien_titre));
+	$stmt->execute(array(':nouveau_titre' => $nouveau_titre));
 
 
-	echo json_encode('Changement enregistré');
+	echo json_encode('Changment enregistré');
 }
 
 

@@ -1,5 +1,3 @@
-var pouet = "pouet";
-
 $(document).ready(function(){
         $("canvas").prependTo("iframe");
         $("canvas").addClass("visible");
@@ -13,62 +11,62 @@ $(document).ready(function(){
     
         $("#cible_ac_theatre , #lieu_ac_theatre").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index1.html");
+            $("iframe").attr("src","../app/index1.html");
         });
     
         $("#cible_ac_centre").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index2.html");
+            $("iframe").attr("src","../app/index2.html");
         });
     
         $("#cible_ac_auvent, #lieu_ac_auvent").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index3.html");
+            $("iframe").attr("src","../app/index3.html");
         });
     
         $("#cible_salon_bonus, #lieu_salon_bonus").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index4.html");
+            $("iframe").attr("src","../app/index4.html");
         });
     
         $("#cible_hall_cinema, #lieu_hall_cinema").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index5.html");
+            $("iframe").attr("src","../app/index5.html");
         });
     
         $("#cible_ruches, #lieu_ruches").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index6.html");
+            $("iframe").attr("src","../app/index6.html");
         });
     
         $("#cible_centre_art_expo").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index7.html");
+            $("iframe").attr("src","../app/index7.html");
         });
     
         $("#cible_centre_art_expo2").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index8.html");
+            $("iframe").attr("src","../app/index8.html");
         });
     
         $("#cible_centre_art, #lieu_centre_art").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index9.html");
+            $("iframe").attr("src","../app/index9.html");
         });
     
         $("#cible_hall_theatre, #lieu_hall_theatre").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index10.html");
+            $("iframe").attr("src","../app/index10.html");
         });
     
         $("#cible_salle_theatre, #lieu_salle_theatre").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index11.html");
+            $("iframe").attr("src","../app/index11.html");
         });
     
          $("#cible_caravanserail, #lieu_caravanserail").click(function(e){
             e.preventDefault();  
-            $("iframe").attr("src","app/index12.html");
+            $("iframe").attr("src","../app/index12.html");
         });
             
     

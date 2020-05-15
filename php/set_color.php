@@ -17,7 +17,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -30,8 +30,7 @@ if (!isset($json_obj) || empty($json_obj)) {
 		echo json_encode("Paramètre manquant".$json_obj);
     	http_response_code(422);
     	exit();	
-}
-else{
+} else {
 
 	$ancienne_couleur = $json_obj['ancienne_couleur'];
 	$nouvelle_couleur = $json_obj['nouvelle_couleur'];
@@ -39,7 +38,8 @@ else{
 	$stmt = $bdd->prepare(<<<SQL
 		UPDATE Couleur
 		SET couleur = :nouvelle_couleur
-SQL);
+SQL
+                         );
 
 	$stmt->execute(array(':nouvelle_couleur' => $nouvelle_couleur));
 	echo json_encode($nouvelle_couleur);
@@ -50,4 +50,4 @@ SQL);
 
 exit();
 
-?>	
+?>

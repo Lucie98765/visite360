@@ -17,7 +17,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -43,7 +43,8 @@ else{
 		UPDATE Sous_titre
 		SET texte_sous_titre = :sous_titre
 		WHERE id_onglet = (SELECT id_onglet FROM Onglet WHERE nom_onglet = :onglet)
-SQL);
+SQL
+                         );
 
 	$stmt->execute(array(':sous_titre' => $sous_titre,':onglet'=>$onglet));
 

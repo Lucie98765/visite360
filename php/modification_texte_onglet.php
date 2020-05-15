@@ -17,7 +17,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -44,7 +44,8 @@ else{
 		UPDATE Texte
 		SET texte = :texte
 		WHERE id_onglet = (SELECT id_onglet FROM Onglet WHERE nom_onglet = :onglet)
-SQL);
+SQL
+                         );
 
 	$stmt->execute(array(':texte' => $texte,':onglet'=>$onglet));
 

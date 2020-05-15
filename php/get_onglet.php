@@ -12,14 +12,14 @@ if (!isset($_SESSION['id_user'])){
 // check HTTP method
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 
-if ($method !== 'post') {
+if ($method !== 'get') {
 	http_response_code(405);
 	echo json_encode(array('message' => 'This method is not allowed.'));
 	exit();
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);

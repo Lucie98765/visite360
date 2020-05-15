@@ -26,8 +26,8 @@ function modification_sous_titre_onglet(id_bouton,id_onglet,id_sous_titre){
 		var request = new XMLHttpRequest();
 		request.onreadystatechange = () => {
 			if(request.readyState == 4) {
-				if(request.status == 200)
-				{
+				if(request.status == 200){
+                    console.log(request);
 					var response = JSON.parse(request.responseText);
 					alert(response);
 					window.location.reload();
@@ -35,7 +35,7 @@ function modification_sous_titre_onglet(id_bouton,id_onglet,id_sous_titre){
 			}
 		}
 		//appel vers requête php d'insertion
-		request.open("POST", "modification_sous_titre_onglet.php",true);
+		request.open("POST", "../php/modification_sous_titre_onglet.php",true);
 		request.send(body);
 	});
 }
@@ -65,7 +65,7 @@ function modification_texte_onglet(id_bouton,id_onglet,id_texte){
 			}
 		}
 		//appel vers requête php d'insertion
-		request.open("POST", "modification_texte_onglet.php",true);
+		request.open("POST", "../php/modification_texte_onglet.php",true);
 		request.send(body);
 	});
 }
@@ -88,7 +88,7 @@ document.ready(() =>{
 		}
 	}
 	//appel vers requête php de chargement
-	request.open("GET", "get_nom_onglet.php",true);
+	request.open("GET", "../php/get_nom_onglet.php",true);
 	request.send();
 });
 

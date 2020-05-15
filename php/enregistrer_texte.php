@@ -17,7 +17,7 @@ if ($method !== 'post') {
 }
 
 // include data
-include_once "BDD/visite_360.pdo.php";
+include_once "../BDD/visite_360.pdo.php";
 
 // response status
 http_response_code(200);
@@ -32,6 +32,10 @@ if (!isset($json_obj) || empty($json_obj)) {
     	exit();	
 }
 else{
+	if($json_obj['texte']==='<br>'){
+		echo json_encode('Changement non-enregistré : champ vide');
+		exit();	
+	}
 
 	$titre = $json_obj['titre'];
 	$texte = $json_obj['texte'];
@@ -40,7 +44,8 @@ else{
 		UPDATE Page
 		SET texte_page = :texte
 		WHERE titre_page = :titre
-SQL);
+SQL
+                         );
 
 	$stmt->execute(array(':texte' => $texte,':titre'=>$titre));
 
